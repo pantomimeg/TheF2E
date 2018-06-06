@@ -33,10 +33,16 @@ body {
 }
 
 .card-header {
-  padding: 1rem 1.5rem 0.5rem 1.5rem;
+  padding: 1rem 1rem 0.5rem 1.5rem;
   background-color: transparent;
   border-bottom: .5px solid #ffbb00;
   color: rgb(100, 45, 0);
+}
+
+.f-right {
+  float: right;
+  z-index: 10;
+
 }
 
 .card-header a {
@@ -44,21 +50,30 @@ body {
   margin-top: -8px;
 }
 
-.card-header a::after {
-  content: "+";
+.closeCard::after {
+  content: "＋";
   color: #ffbb00;
   font-size: 1.5rem;
   display: table;
   clear: both;
 }
 
+.openCard::after {
+  content: "－";
+  color: #ffbb00;
+  font-size: 1.5rem;
+  display: table;
+  clear: both;
+}
+
+/* 
 .card-header a:hover::after {
   content: "-";
 }
 
 .card-header a:active::after {
   content: "-";
-}
+} */
 
 .card-header input,
 .card-header label {
@@ -77,9 +92,9 @@ body {
 
 .card-body {
   padding: 1.25rem 1.8rem;
-  background-color : rgb(255, 255, 248);
+  background-color: rgb(255, 255, 248);
 }
 
-.courses .mix-target{
+.courses .mix-target {
   display: none;
 }
