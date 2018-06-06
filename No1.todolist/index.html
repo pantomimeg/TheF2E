@@ -20,8 +20,8 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jquery.mixitup.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -29,60 +29,105 @@
 <body>
   <div id="wrap">
     <div id="header">
-
-    </div>
-    <div id="main">
-
-      <div id="accordion">
-
-        <div class="card">
-          <div class="card-header">
-            <input type="checkbox" id="c001">
-<label for="c001">art class</label>
-            <a class="card-link" data-toggle="collapse" href="#collapse_001"></a>
-          </div>
-          <div id="collapse_001" class="collapse" data-parent="#accordion">
-            <div class="card-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
-            </div>
-          </div>
-          </label>
+      <div class="twelve columns">
+        <div class="programs">
+          <button class="filter-btn" data-filter="all">All</button>
+          <button class="filter-btn" data-filter=".inProgress">In Progress</button>
+          <button class="filter-btn" data-filter=".completed">Completed</button>
         </div>
-
-<div class="card">
-  <div class="card-header">
-    <input type="checkbox" id="c002">
-<label for="c002">painting class</label>
-    <a class="card-link" data-toggle="collapse" href="#collapse_002"></a>
-  </div>
-  <div id="collapse_002" class="collapse" data-parent="#accordion">
-    <div class="card-body">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam sequi nihil minus necessitatibus aut dolor odit omnis vero libero dolorem.
-    </div>
-  </div>
-  </label>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <input type="checkbox" id="c003">
-    <label for="c003">design class</label>
-    <a class="card-link" data-toggle="collapse" href="#collapse_003"></a>
-  </div>
-  <div id="collapse_003" class="collapse" data-parent="#accordion">
-    <div class="card-body">
-      lorem15
-    </div>
-  </div>
-  </label>
-</div>
-
-
       </div>
+    </div>
+
+    <div class="courses" id="main">
+      <ul id="accordion">
+
+        <!--card_001-->
+        <li class="mix-target inProgress">
+          <div class="card">
+            <div class="card-header">
+              <input type="checkbox" id="c001" name="ch">
+              <label for="c001">art class</label>
+              <a class="card-link" data-toggle="collapse" href="#collapse_001"></a>
+            </div>
+            <div id="collapse_001" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
+              </div>
+            </div>
+            </label>
+          </div>
+        </li>
+
+
+        <!--card_002-->
+        <li class="mix-target inProgress">
+          <div class="card">
+            <div class="card-header">
+              <input type="checkbox" id="c002" name="ch">
+              <label for="c002">painting class</label>
+              <a class="card-link" data-toggle="collapse" href="#collapse_002"></a>
+            </div>
+            <div id="collapse_002" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam sequi nihil minus necessitatibus aut dolor odit omnis vero
+                libero dolorem.
+              </div>
+            </div>
+            </label>
+          </div>
+        </li>
+
+        <!--card_003-->
+        <li class="mix-target inProgress">
+          <div class="card">
+            <div class="card-header">
+              <input type="checkbox" id="c003" name="ch">
+              <label for="c003">design class</label>
+              <a class="card-link" data-toggle="collapse" href="#collapse_003"></a>
+            </div>
+            <div id="collapse_003" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                lorem15
+              </div>
+            </div>
+            </label>
+          </div>
+        </li>
+
+      </ul>
 
     </div>
     <div id="footer"></div>
   </div>
+
+
+  <!--completed checked-->
+  <script>
+    $('input[name="ch"]').on('change', function (e) {
+      $(this).parent().parent().parent().toggleClass("inProgress");
+      $(this).parent().parent().parent().toggleClass("completed");
+    });
+  </script>
+
+
+
+  <!--select-->
+  <script>
+    $('#main').mixItUp({
+      animation: {
+        duration: 500
+      },
+      selectors: {
+        target: '.mix-target',
+        filter: '.filter-btn',
+      },
+      callbacks: {
+        onMixEnd: function (state) {
+          console.log(state)
+        }
+      }
+    });
+  </script>
 
 
 

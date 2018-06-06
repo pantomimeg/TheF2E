@@ -1,12 +1,13 @@
 body {
   padding: 20px;
+  font-family: "Microsoft JhengHei";
   background: url(../img/egg_bg.svg)50% 0 no-repeat fixed;
 }
 
 #wrap {
   margin: 0 auto;
   width: 500px;
-  background-color: rgb(255, 250, 240);
+  background-color: rgb(255, 255, 248);
   box-shadow: 1.5px 1.5px 12px 1px rgba(55, 20, 0, 0.14);
   border-radius: 10px 10px 0 0;
   overflow: hidden;
@@ -76,5 +77,9 @@ body {
 
 .card-body {
   padding: 1.25rem 1.8rem;
-  background-color: floralwhite;
+  background-color : rgb(255, 255, 248);
+}
+
+.courses .mix-target{
+  display: none;
 }
