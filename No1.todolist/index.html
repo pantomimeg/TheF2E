@@ -32,16 +32,18 @@
 
 <body>
   <div id="wrap">
-    <div id="header">
-      <div class="twelve columns">
-        <div class="programs">
-          <button class="filter-btn" data-filter="all">All</button>
-          <button class="filter-btn" data-filter=".inProgress">In Progress</button>
-          <button class="filter-btn" data-filter=".completed">Completed</button>
-        </div>
+
+    <!--header-->
+<div id="header" class="d-flex justify-content-center align-self-center">
+      <div class="row twelve columns">
+          <button class="filter-btn sesame-l" data-filter="all">＠</button>
+          <button class="filter-btn sesame-c" data-filter=".inProgress">＠</button>
+          <button class="filter-btn sesame-r" data-filter=".completed">＠</button>
       </div>
     </div>
 
+
+    <!--main-->
     <div class="courses" id="main">
       <ul id="accordion">
 
@@ -49,51 +51,44 @@
         <li class="mix-target inProgress">
           <div class="card">
             <div class="card-header">
-
-              <input type="checkbox" id="c001" name="ch">
-              <label for="c001">art class</label>
-              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_001"></a>
+              <input type="checkbox" name="ch">
+              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_001">art class</a>
             </div>
             <div id="collapse_001" class="collapse" data-parent="#accordion">
               <div class="card-body">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
               </div>
             </div>
-            </label>
           </div>
         </li>
 
         <!--card_002-->
         <li class="mix-target inProgress">
           <div class="card">
-            <div class="card-header">
-              <input type="checkbox" id="c002" name="ch">
-              <label for="c002">design class</label>
-              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_002"></a>
+            <div class="card-header .text-left">
+              <input type="checkbox" name="ch">
+              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_002">art class</a>
             </div>
             <div id="collapse_002" class="collapse" data-parent="#accordion">
               <div class="card-body">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
               </div>
             </div>
-            </label>
           </div>
         </li>
 
         <!--card_003-->
         <li class="mix-target inProgress">
           <div class="card">
-            <div class="card-header">
-              <input type="checkbox" id="c003" name="ch">
-              <label for="c003">painting class</label>
-              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_003"></a>
+            <div class="card-header .text-left">
+              <input type="checkbox" name="ch">
+              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_003">art class</a>
             </div>
             <div id="collapse_003" class="collapse" data-parent="#accordion">
               <div class="card-body">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
               </div>
             </div>
-            </label>
           </div>
         </li>
 
@@ -108,6 +103,8 @@
   <script>
     $('input[name="ch"]').change(function () {
       $(this).parent().parent().parent().toggleClass('inProgress').toggleClass('completed');
+      $(this).parent().parent().toggleClass('done');
+      $(this).parent().toggleClass('done-header');
     });
   </script>
 
@@ -119,11 +116,11 @@
   </script> -->
 
   <!--open card-->
-  <script>
+  <!-- <script>
     $('.card-link').click(function () {
       $(this).toggleClass('closeCard').toggleClass('openCard');
     });
-  </script>
+  </script> -->
 
 
 
