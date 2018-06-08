@@ -1,6 +1,6 @@
 body {
   padding: 20px;
-  font-family: "Microsoft JhengHei";
+  font-family: 'Quicksand', sans-serif;
   background: url(../img/egg_bg.svg)50% 0 no-repeat fixed;
 }
 
@@ -11,46 +11,84 @@ body {
 /*------------------ header ------------------*/
 
 #header {
-  height: 9rem;
+  height: 10rem;
+  top: .3rem;
   background-color: #c36919;
-  border-radius: 8rem 8rem .5rem .5em;
-  box-shadow: 0px -3px 50px 3px rgba(165, 60, 0, 0.5) inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2);
+  border-radius: 10rem 10rem .5rem .5em;
+  box-shadow: 0px -6px 50px 13px rgba(165, 60, 0, 0.5) inset, 0px 2px 3px 0px rgba(155, 85, 0, .1);
 }
 
 .sesame-l {
-  width: 4rem;
-  height: 4rem;
-  margin-top: 2.4rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  margin-top: 2.5rem;
   border-width: 0px;
   border-color: transparent;
   border-radius: 250px 10px 170px 100px / 170px 10px 250px 100px;
   background-color: #ffeab0;
   transform: scale(0.95, 1) rotate(-10deg);
-  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 0px 2px 5px 1px rgba(55, 20, 0, 0.25);
+  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 0px 2px 5px 1px rgba(55, 20, 0, 0.4);
 }
 
 .sesame-c {
-  width: 4rem;
-  height: 4rem;
+  width: 4.2rem;
+  height: 4.2rem;
   margin-top: 3rem;
   border-width: 0px;
   border-color: transparent;
   border-radius: 250px 10px 170px 120px / 170px 10px 250px 120px;
   background-color: #ffeab0;
   transform: scale(0.95, 1) rotate(-45deg);
-  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 0px 2px 5px 1px rgba(55, 20, 0, 0.25);
+  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 0px 2px 5px 1px rgba(55, 20, 0, 0.4);
 }
 
 .sesame-r {
-  width: 4rem;
-  height: 4rem;
-  margin-top: 2.4rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  margin-top: 2.5rem;
   border-width: 0px;
   border-color: transparent;
   border-radius: 250px 10px 170px 100px / 170px 10px 250px 100px;
   background-color: #ffeab0;
   transform: scale(0.95, 1) rotate(-80deg);
-  box-shadow: 2px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, -2px 2px 5px 1px rgba(55, 20, 0, 0.25);
+  box-shadow: 2px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, -2px 2px 5px 1px rgba(55, 20, 0, 0.4);
+}
+
+.sesame-l svg {
+  margin: .8rem .6rem 0 0;
+  font-size: 1.5rem;
+  color: #642d00;
+  transform: scale(0.95, 1) rotate(10deg);
+}
+
+.sesame-c svg {
+  margin: 1rem .8rem 0 0;
+  font-size: 1.5rem;
+  color: #642d00;
+  transform: scale(0.95, 1) rotate(80deg);
+}
+
+.sesame-r svg {
+  margin: 1rem 1rem 0 0;
+  font-size: 1.6rem;
+  color: #642d00;
+  transform: scale(0.95, 1) rotate(80deg);
+}
+
+button svg:hover {
+  opacity: .6;
+}
+
+.sesame-l:hover {
+  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 2px 4px 12px 0px rgba(55, 20, 0, 0.15);
+}
+
+.sesame-c:hover {
+  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 2px 4px 12px 0px rgba(55, 20, 0, 0.15);
+}
+
+.sesame-r:hover {
+  box-shadow: 2px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 0px 4px 12px 0px rgba(55, 20, 0, 0.15);
 }
 
 button+button {
@@ -60,19 +98,20 @@ button+button {
 /*------------------ main ------------------*/
 
 #main {
-  padding: 1.5rem 1.5rem .2rem 1.5rem;
+  padding: 1.8rem 1.5rem .2rem 1.5rem;
   margin: 0 .3rem 0 .3rem;
   background-color: #ffefc0;
-  box-shadow: 0 15px 10px -13px #7e3b00ba inset, 0 -13px 8px -13px #7e3b00bf inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2);
+  box-shadow: 0 20px 10px -13px #7e3b00ba inset, 0 -13px 8px -13px #7e3b00bf inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2);
 }
 
-input[type="checkbox"] {
-  cursor: pointer;
-}
-
-.fa-star {
+.fa-star,
+.fa-circle {
   cursor: pointer;
   color: #642d00;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
 }
 
 .card {
@@ -80,35 +119,49 @@ input[type="checkbox"] {
   border: none;
   border-bottom: 3px solid #642d00;
   border-radius: .25rem .25rem 0 0;
-  box-shadow: 0px 1.5px 7px .5px rgba(90, 40, 0, .14);
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
 }
 
 .card-header {
   padding: .6rem 1rem .6rem 1rem;
-  background-color: transparent;
+  background-color: rgba(255, 185, 0, 0.5);
   border-bottom: .5px solid #642d00;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
 }
 
 .card-header a {
-  margin-left: 8px;
+  margin-left: .2rem;
   font-size: 1.2rem;
   color: #642d00;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
 }
 
 .card-header p {
   margin-bottom: 0;
   font-size: .5rem;
-  color: #bbb;
+  color: rgba(195, 100, 0, 0.8);
   margin-left: 1.5rem;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
 }
 
 .card-header svg {
   margin-left: .3rem;
 }
 
-.card-header button {
+.star-btn {
   float: right;
-  margin-top: .2rem;
 }
 
 .done {
@@ -166,49 +219,47 @@ input[type="checkbox"] {
   -o-transition: .3s;
 }
 
-/* .closeCard::after {
-  content: "＋";
-  color: #ffbb00;
-  font-size: 1.5rem;
-  display: table;
-  clear: both;
-}
-
-.openCard::after {
-  content: "－";
-  color: #ffbb00;
-  font-size: 1.5rem;
-  display: table;
-  clear: both;
-} */
-
-/* 
-.card-header a:hover::after {
-  content: "-";
-}
-
-.card-header a:active::after {
-  content: "-";
-} */
-
-/* .card-header input,
-.card-header label {
-  cursor: pointer;
-} */
-
-/* .card-header input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-.card-header input[type="checkbox"]:checked+label {
-  color: #ccc;
-  text-decoration: line-through;
-  cursor: pointer;
-} */
-
 .card-body {
   padding: 1.25rem 1.8rem;
-  background-color: rgb(255, 255, 248);
+  background-color: rgba(255, 185, 0, 0.1);
+}
+
+.add-todo .card-header {
+  padding: .7rem 1rem .6rem 1rem;
+  border-bottom: .5px solid #ffbb00;
+  background-color: rgba(255, 185, 0, .1);
+}
+
+.add-todo {
+  border-bottom: 3px solid #ffbb00;
+}
+
+.add-todo p {
+  display: inline;
+  margin-top: .2rem;
+  margin-left: .6rem;
+  font-size: 1.2rem;
+  color: rgba(255, 187, 0, 0.4);
+}
+
+.add-todo .fa-pencil-alt {
+  float: right;
+  margin: .2rem 0 0 .2rem;
+  font-size: 1.2rem;
+  color: rgba(255, 187, 0, 0.4);
+}
+
+.add-todo p:hover,
+.add-todo .fa-pencil-alt:hover {
+  color: rgb(255, 187, 0);
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+}
+
+.add-todo:hover {
+  box-shadow: 1px 3px 5px 0px rgba(150, 50, 0, .25);
 }
 
 .courses .mix-target {
@@ -232,8 +283,6 @@ input[type="checkbox"] {
     padding-right: 0;
     padding-left: 0;
   }
-
-
   /*------------------ header ------------------*/
   #header {
     height: 8.5rem;
@@ -248,8 +297,6 @@ input[type="checkbox"] {
   button+button {
     margin-left: 1rem;
   }
-
-
   /*------------------ main ------------------*/
   #main {
     padding: 1.5rem 1.2rem .2rem 1.2rem;

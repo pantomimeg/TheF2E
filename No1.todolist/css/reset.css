@@ -136,4 +136,5 @@ input,button {
     border-style: none;
     border-width: 0;
     background-color: transparent;
+    outline:0;
 }

@@ -30,18 +30,27 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- type -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div id="wrap" class="container d-flex justify-content-center">
-<div class="col-sm-12	col-md-10 col-lg-7">
+  <div id="wrap" class="container d-flex justify-content-center">
+    <div class="col-sm-12	col-md-10 col-lg-7">
       <!--header-->
       <div id="header" class="col-sm-12 d-flex justify-content-center align-self-center">
         <div class="row twelve columns">
-          <button class="filter-btn sesame-l" data-filter="all">＠</button>
-          <button class="filter-btn sesame-c" data-filter=".inProgress">＠</button>
-          <button class="filter-btn sesame-r" data-filter=".completed">＠</button>
+<button class="filter-btn sesame-l" data-filter="all">
+  <i class="fas fa-list"></i>
+</button>
+<button class="filter-btn sesame-c" data-filter=".inProgress">
+  <i class="fas fa-sync-alt"></i>
+</button>
+<button class="filter-btn sesame-r" data-filter=".completed">
+  <i class="fas fa-check-circle"></i>
+</button>
         </div>
       </div>
 
@@ -50,15 +59,34 @@
       <div class="courses" id="main">
         <ul id="accordion">
 
+          <!--card_add-->
+          <li class="mix-target">
+            <div class="card add-todo">
+              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_000">
+                <div class="card-header">
+                  <p>ADD LIST</p>
+<i class="fas fa-pencil-alt"></i>
+                </div>
+              </a>
+              <div id="collapse_000" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
+                </div>
+              </div>
+            </div>
+          </li>
+
           <!--card_001-->
           <li class="mix-target inProgress">
             <div class="card">
               <div class="card-header">
-                <input type="checkbox" name="ch">
-                <a class="card-link closeCard" data-toggle="collapse" href="#collapse_001">art class</a>
-                <button class="star-btn">
+                <a class="check-btn">
+                  <i class="far fa-circle"></i>
+                </a>
+                <a class="card-link closeCard" data-toggle="collapse" href="#collapse_001">Art class</a>
+                <a class="star-btn">
                   <i class="far fa-star"></i>
-                </button>
+                </a>
                 <p>
                   <i class="far fa-comment-dots"></i>
                   <i class="far fa-file"></i>
@@ -78,12 +106,18 @@
           <li class="mix-target inProgress">
             <div class="card">
               <div class="card-header">
-                <input type="checkbox" name="ch">
-                <a class="card-link closeCard" data-toggle="collapse" href="#collapse_002">art class</a>
-                <button class="star-btn">
+                <a class="check-btn">
+                  <i class="far fa-circle"></i>
+                </a>
+                <a class="card-link closeCard" data-toggle="collapse" href="#collapse_002">UI class</a>
+                <a class="star-btn">
                   <i class="far fa-star"></i>
-                </button>
-                <p>dewf</p>
+                </a>
+                <p>
+                  <i class="far fa-comment-dots"></i>
+                  <i class="far fa-calendar-alt"></i>
+                  <span>2018/06/09</span>
+                </p>
               </div>
               <div id="collapse_002" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -97,12 +131,18 @@
           <li class="mix-target inProgress">
             <div class="card">
               <div class="card-header">
-                <input type="checkbox" name="ch">
-                <a class="card-link closeCard" data-toggle="collapse" href="#collapse_003">art class</a>
-                <button class="star-btn">
+                <a class="check-btn">
+                  <i class="far fa-circle"></i>
+                </a>
+                <a class="card-link closeCard" data-toggle="collapse" href="#collapse_003">Englisg class</a>
+                <a class="star-btn">
                   <i class="far fa-star"></i>
-                </button>
-                <p>dewf</p>
+                </a>
+                <p>
+                  <i class="far fa-comment-dots"></i>
+                  <i class="far fa-calendar-alt"></i>
+                  <span>2018/06/09</span>
+                </p>
               </div>
               <div id="collapse_003" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -135,13 +175,34 @@
   </script>
 
   <!--completed checked-->
-  <script>
+  <!-- <script>
     $('input[name="ch"]').change(function () {
       $(this).parent().parent().parent().toggleClass('inProgress').toggleClass('completed');
       $(this).parent().parent().toggleClass('done');
       $(this).parent().toggleClass('done-header');
     });
+  </script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      $('.check-btn').on('click', function () {
+        $(this).parent().parent().parent().toggleClass('inProgress').toggleClass('completed');
+        $(this).parent().parent().toggleClass('done');
+        $(this).parent().toggleClass('done-header');
+        $(this)
+          .find('[data-fa-i2svg]')
+          .toggleClass('fa-circle')
+          .toggleClass('fa-check-circle');
+        let obj = $(this).find("[data-fa-i2svg]");
+        let currentStyle = obj.data('prefix');
+        if (currentStyle === 'fas') {
+          obj.toggleClass('fas').toggleClass('far')
+        } else {
+          obj.toggleClass('far').toggleClass('fas')
+        }
+      });
+    });
   </script>
+
 
 
   <!--open card-->
