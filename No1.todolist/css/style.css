@@ -4,14 +4,11 @@ body {
   background: url(../img/egg_bg.svg)50% 0 no-repeat fixed;
 }
 
-
-
-
-
 #wrap {
   margin: 0 auto;
-  width: 500px;
 }
+
+/*------------------ header ------------------*/
 
 #header {
   height: 9rem;
@@ -21,8 +18,8 @@ body {
 }
 
 .sesame-l {
-  width: 65px;
-  height: 65px;
+  width: 4rem;
+  height: 4rem;
   margin-top: 2.4rem;
   border-width: 0px;
   border-color: transparent;
@@ -33,8 +30,8 @@ body {
 }
 
 .sesame-c {
-  width: 62px;
-  height: 62px;
+  width: 4rem;
+  height: 4rem;
   margin-top: 3rem;
   border-width: 0px;
   border-color: transparent;
@@ -45,8 +42,8 @@ body {
 }
 
 .sesame-r {
-  width: 65px;
-  height: 65px;
+  width: 4rem;
+  height: 4rem;
   margin-top: 2.4rem;
   border-width: 0px;
   border-color: transparent;
@@ -60,13 +57,22 @@ button+button {
   margin-left: 2.5rem;
 }
 
+/*------------------ main ------------------*/
+
 #main {
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem 1.5rem .2rem 1.5rem;
   margin: 0 .3rem 0 .3rem;
   background-color: #ffefc0;
-  box-shadow: 0 15px 10px -13px #7e3b00ba inset,
-  0 -13px 8px -13px #7e3b00bf inset,
-  1px 1px 5px 1px rgba(55, 20, 0, 0.2);
+  box-shadow: 0 15px 10px -13px #7e3b00ba inset, 0 -13px 8px -13px #7e3b00bf inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.fa-star {
+  cursor: pointer;
+  color: #642d00;
 }
 
 .card {
@@ -92,12 +98,72 @@ button+button {
 .card-header p {
   margin-bottom: 0;
   font-size: .5rem;
-  color: #999;
-  margin-left: 1.7rem;
+  color: #bbb;
+  margin-left: 1.5rem;
 }
 
-.card-header button{
+.card-header svg {
+  margin-left: .3rem;
+}
+
+.card-header button {
   float: right;
+  margin-top: .2rem;
+}
+
+.done {
+  border-bottom: 3px solid #fff;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+}
+
+.done-header {
+  border-bottom: .5px solid #fff;
+  background-color: #28a745 !important;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+}
+
+.done-header a,
+.done-header p,
+.done-header svg {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, .5);
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+}
+
+.stared {
+  border-bottom: 3px solid #fff;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+}
+
+.stared-header {
+  border-bottom: .5px solid #fff;
+  background-color: #dc3545;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+}
+
+.stared-header a,
+.stared-header p,
+.stared-header svg {
+  color: #fff;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
 }
 
 /* .closeCard::after {
@@ -149,32 +215,7 @@ button+button {
   display: none;
 }
 
-.done {
-  border-bottom: 3px solid #fff;
-  transition: .3s;
-  -moz-transition: .3s;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-}
-
-.done-header {
-  border-bottom: .5px solid #fff;
-  background-color: #28a745;
-  transition: .3s;
-  -moz-transition: .3s;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-}
-
-.done-header a,
-.done-header p {
-  text-decoration: line-through;
-  color: #fff;
-  transition: .3s;
-  -moz-transition: .3s;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-}
+/*------------------ footer ------------------*/
 
 #footer {
   height: 3rem;
@@ -183,93 +224,34 @@ button+button {
   box-shadow: 0px -3px 20px 3px rgba(165, 60, 0, 0.5) inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2);
 }
 
+@media (max-width: 575.98px) {
+  body {
+    padding: 1rem .05rem 1rem .05rem;
+  }
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
 
-/*-----icon-----*/
 
-.fa,
-.fas,
-.far,
-.fal,
-.fab {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-}
+  /*------------------ header ------------------*/
+  #header {
+    height: 8.5rem;
+  }
+  .sesame-l,
+  .sesame-r {
+    margin-top: 2.2rem;
+  }
+  .sesame-c {
+    margin-top: 2.8rem;
+  }
+  button+button {
+    margin-left: 1rem;
+  }
 
-.fa-lg {
-  font-size: 1.33333em;
-  line-height: 0.75em;
-  vertical-align: -.0667em;
-}
 
-.fa-xs {
-  font-size: .75em;
-}
-
-.fa-sm {
-  font-size: .875em;
-}
-
-.fa-1x {
-  font-size: 1em;
-}
-
-.fa-2x {
-  font-size: 2em;
-}
-
-.fa-3x {
-  font-size: 3em;
-}
-
-.fa-4x {
-  font-size: 4em;
-}
-
-.fa-5x {
-  font-size: 5em;
-}
-
-.fa-6x {
-  font-size: 6em;
-}
-
-.fa-7x {
-  font-size: 7em;
-}
-
-.fa-8x {
-  font-size: 8em;
-}
-
-.fa-9x {
-  font-size: 9em;
-}
-
-.fa-10x {
-  font-size: 10em;
-}
-
-.star-btn{
-  color: #642d00;
-}
-
-.stared{
-  color: #ffbb00;
-}
-
-.fa-star:before {
-  content: "\f005";
-}
-
-.fa-star-half:before {
-  content: "\f089";
-}
-
-.fa-pencil-alt:before {
-  content: "\f303";
+  /*------------------ main ------------------*/
+  #main {
+    padding: 1.5rem 1.2rem .2rem 1.2rem;
+  }
 }

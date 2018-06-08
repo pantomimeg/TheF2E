@@ -23,10 +23,8 @@
   <script src="js/jquery.mixitup.min.js"></script>
 
   <!-- fontawesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous">
+  <script src="js/fontawesome-all.js"></script>
+  <link rel="stylesheet" href="css/fontawesome-all.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -35,78 +33,106 @@
 </head>
 
 <body>
-  <div id="wrap">
 
-    <!--header-->
-    <div id="header" class="d-flex justify-content-center align-self-center">
-      <div class="row twelve columns">
-        <button class="filter-btn sesame-l" data-filter="all">＠</button>
-        <button class="filter-btn sesame-c" data-filter=".inProgress">＠</button>
-        <button class="filter-btn sesame-r" data-filter=".completed">＠</button>
+<div id="wrap" class="container d-flex justify-content-center">
+<div class="col-sm-12	col-md-10 col-lg-7">
+      <!--header-->
+      <div id="header" class="col-sm-12 d-flex justify-content-center align-self-center">
+        <div class="row twelve columns">
+          <button class="filter-btn sesame-l" data-filter="all">＠</button>
+          <button class="filter-btn sesame-c" data-filter=".inProgress">＠</button>
+          <button class="filter-btn sesame-r" data-filter=".completed">＠</button>
+        </div>
       </div>
-    </div>
 
 
-    <!--main-->
-    <div class="courses" id="main">
-      <ul id="accordion">
+      <!--main-->
+      <div class="courses" id="main">
+        <ul id="accordion">
 
-        <!--card_001-->
-        <li class="mix-target inProgress">
-          <div class="card">
-            <div class="card-header">
-              <input type="checkbox" name="ch">
-              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_001">art class</a>
-                <button class="star-btn" name="star-btn">
+          <!--card_001-->
+          <li class="mix-target inProgress">
+            <div class="card">
+              <div class="card-header">
+                <input type="checkbox" name="ch">
+                <a class="card-link closeCard" data-toggle="collapse" href="#collapse_001">art class</a>
+                <button class="star-btn">
                   <i class="far fa-star"></i>
                 </button>
-              <p>dwdwe</p>
-            </div>
-            <div id="collapse_001" class="collapse" data-parent="#accordion">
-              <div class="card-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
+                <p>
+                  <i class="far fa-comment-dots"></i>
+                  <i class="far fa-file"></i>
+                  <i class="far fa-calendar-alt"></i>
+                  <span>2018/06/09</span>
+                </p>
+              </div>
+              <div id="collapse_001" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
+                </div>
               </div>
             </div>
-          </div>
-        </li>
+          </li>
 
-        <!--card_002-->
-        <li class="mix-target inProgress">
-          <div class="card">
-            <div class="card-header .text-left">
-              <input type="checkbox" name="ch">
-              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_002">art class</a>
-            </div>
-            <div id="collapse_002" class="collapse" data-parent="#accordion">
-              <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quo.</p>
+          <!--card_002-->
+          <li class="mix-target inProgress">
+            <div class="card">
+              <div class="card-header">
+                <input type="checkbox" name="ch">
+                <a class="card-link closeCard" data-toggle="collapse" href="#collapse_002">art class</a>
+                <button class="star-btn">
+                  <i class="far fa-star"></i>
+                </button>
+                <p>dewf</p>
+              </div>
+              <div id="collapse_002" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
+                </div>
               </div>
             </div>
-          </div>
-        </li>
+          </li>
 
-        <!--card_003-->
-        <li class="mix-target inProgress">
-          <div class="card">
-            <div class="card-header .text-left">
-              <input type="checkbox" name="ch">
-              <a class="card-link closeCard" data-toggle="collapse" href="#collapse_003">art class</a>
-
-            </div>
-            <div id="collapse_003" class="collapse" data-parent="#accordion">
-              <div class="card-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
+          <!--card_003-->
+          <li class="mix-target inProgress">
+            <div class="card">
+              <div class="card-header">
+                <input type="checkbox" name="ch">
+                <a class="card-link closeCard" data-toggle="collapse" href="#collapse_003">art class</a>
+                <button class="star-btn">
+                  <i class="far fa-star"></i>
+                </button>
+                <p>dewf</p>
+              </div>
+              <div id="collapse_003" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
+                </div>
               </div>
             </div>
-          </div>
-        </li>
+          </li>
 
-      </ul>
+        </ul>
 
+      </div>
+      <div id="footer"></div>
     </div>
-    <div id="footer"></div>
   </div>
 
+  <!--icon star-->
+  <script>
+    $(".star-btn").on("click", function () {
+      $(this).parent().parent().toggleClass('stared');
+      $(this).parent().toggleClass('stared-header');
+      let obj = $(this).find("[data-fa-i2svg]");
+      let currentStyle = obj.data('prefix');
+      if (currentStyle === 'fas') {
+        obj.toggleClass('fas').toggleClass('far')
+      } else {
+        obj.toggleClass('far').toggleClass('fas')
+      }
+    });
+  </script>
 
   <!--completed checked-->
   <script>
@@ -116,17 +142,6 @@
       $(this).parent().toggleClass('done-header');
     });
   </script>
-
-  <!--icon star-->
-
-  <!-- <script>
-    $('button[name="star-btn"]').change(function () {
- $(this).toggleClass('star-btn').toggleClass('stared');
-    });
-  </script> -->
-
-
-
 
 
   <!--open card-->

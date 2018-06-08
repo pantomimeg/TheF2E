@@ -130,7 +130,7 @@ table {
     border-spacing: 0;
 }
 
-button {
+input,button {
     padding: 0;
     border-color: transparent;
     border-style: none;
