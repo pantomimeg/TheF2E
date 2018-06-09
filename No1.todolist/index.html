@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>EG's TheF2E - No1.todolist</title>
   <link rel="shortcut icon" type="image/x-icon" href="egg.ico">
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -27,30 +27,35 @@
   <link rel="stylesheet" href="css/fontawesome-all.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!-- datepicker -->
+  <script src="js/gijgo.min.js" type="text/javascript"></script>
+  <link href="css/gijgo.css" rel="stylesheet" type="text/css" />
+
+  <link href="css/style.css" rel="stylesheet">
 
   <!-- type -->
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
 
   <div id="wrap" class="container d-flex justify-content-center">
-    <div class="col-sm-12	col-md-10 col-lg-7">
+    <div class="col-sm-12	col-md-8 col-lg-5">
       <!--header-->
       <div id="header" class="col-sm-12 d-flex justify-content-center align-self-center">
         <div class="row twelve columns">
-<button class="filter-btn sesame-l" data-filter="all">
-  <i class="fas fa-list"></i>
-</button>
-<button class="filter-btn sesame-c" data-filter=".inProgress">
-  <i class="fas fa-sync-alt"></i>
-</button>
-<button class="filter-btn sesame-r" data-filter=".completed">
-  <i class="fas fa-check-circle"></i>
-</button>
+          <button class="filter-btn sesame-l" data-filter="all">
+            <i class="fas fa-list"></i>
+          </button>
+          <button class="filter-btn sesame-c" data-filter=".inProgress">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="filter-btn sesame-r" data-filter=".completed">
+            <i class="fas fa-check-circle"></i>
+          </button>
         </div>
       </div>
 
@@ -64,13 +69,51 @@
             <div class="card add-todo">
               <a class="card-link closeCard" data-toggle="collapse" href="#collapse_000">
                 <div class="card-header">
-                  <p>ADD LIST</p>
-<i class="fas fa-pencil-alt"></i>
+                  <input type="text" class="task-title" name="title" placeholder="Add a New Task">
+                  <i class="fas fa-pencil-alt"></i>
                 </div>
               </a>
               <div id="collapse_000" class="collapse" data-parent="#accordion">
                 <div class="card-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
+                  <form>
+                    <div class="form-group">
+                      <p>
+                        <i class="far fa-calendar-alt"></i> Deadline
+                      </p>
+                      <div>
+                        <label for="datepicker">
+                        </label>
+                        <input type="datetime" id="datepicker" name="datetime" placeholder="datetime">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <p>
+                        <i class="far fa-file"></i> File
+                      </p>
+                      <div>
+                        <label for="add-file">
+                          <i class="far fa-plus-square fa-2x"></i>
+                        </label>
+                        <input type="file" class="form-control-file" id="add-file" placeholder="file">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="add-text">
+                        <p>
+                          <i class="far fa-comment-dots"></i> Comment
+                        </p>
+                        <div>
+                      </label>
+                      <textarea class="form-control" id="add-text" rows="3" name="text" placeholder="text"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="container d-flex justify-content-center">
+                    <button type="reset" class="col-6 cancel" data-toggle="collapse" data-target="#collapse_000">
+                      <i class="fas fa-times"></i> Cancel</button>
+                    <button type="submit" class="col-6 addTask" data-toggle="collapse" data-target="#collapse_000">
+                      <i class="fas fa-plus"></i> Add Task</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -88,15 +131,16 @@
                   <i class="far fa-star"></i>
                 </a>
                 <p>
-                  <i class="far fa-comment-dots"></i>
-                  <i class="far fa-file"></i>
                   <i class="far fa-calendar-alt"></i>
-                  <span>2018/06/09</span>
+                  <span>06/05/2018</span>
+                  <i class="far fa-file"></i>
+                  <i class="far fa-comment-dots"></i>
                 </p>
               </div>
               <div id="collapse_001" class="collapse" data-parent="#accordion">
                 <div class="card-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, alias?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ullam praesentium dignissimos maxime laudantium, in fugiat
+                  quis nemo corporis quod, alias molestiae dolore dolores vero vitae earum architecto, fugit sint.
                 </div>
               </div>
             </div>
@@ -114,9 +158,9 @@
                   <i class="far fa-star"></i>
                 </a>
                 <p>
-                  <i class="far fa-comment-dots"></i>
                   <i class="far fa-calendar-alt"></i>
-                  <span>2018/06/09</span>
+                  <span>06/09/2018</span>
+                  <i class="far fa-comment-dots"></i>
                 </p>
               </div>
               <div id="collapse_002" class="collapse" data-parent="#accordion">
@@ -139,9 +183,9 @@
                   <i class="far fa-star"></i>
                 </a>
                 <p>
-                  <i class="far fa-comment-dots"></i>
                   <i class="far fa-calendar-alt"></i>
-                  <span>2018/06/09</span>
+                  <span>06/10/2018</span>
+                  <i class="far fa-comment-dots"></i>
                 </p>
               </div>
               <div id="collapse_003" class="collapse" data-parent="#accordion">
@@ -159,9 +203,9 @@
     </div>
   </div>
 
-  <!--icon star-->
+  <!-- icon star -->
   <script>
-    $(".star-btn").on("click", function () {
+    $('.star-btn').on('click', function () {
       $(this).parent().parent().toggleClass('stared');
       $(this).parent().toggleClass('stared-header');
       let obj = $(this).find("[data-fa-i2svg]");
@@ -174,14 +218,7 @@
     });
   </script>
 
-  <!--completed checked-->
-  <!-- <script>
-    $('input[name="ch"]').change(function () {
-      $(this).parent().parent().parent().toggleClass('inProgress').toggleClass('completed');
-      $(this).parent().parent().toggleClass('done');
-      $(this).parent().toggleClass('done-header');
-    });
-  </script> -->
+  <!-- checked -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       $('.check-btn').on('click', function () {
@@ -203,25 +240,7 @@
     });
   </script>
 
-
-
-  <!--open card-->
-  <!-- <script>
-  //   $('.card-link').click(function () {
-  //     $(this).toggleClass('closeCard').toggleClass('openCard');
-  //   });
-  // </script> -->
-
-
-  <!--open card-->
-  <!-- <script>
-  //   $('.card-link').click(function () {
-  //     $(this).toggleClass('closeCard').toggleClass('openCard');
-  //   });
-  // </script> -->
-
-
-  <!--select-->
+  <!-- select -->
   <script>
     $('#main').mixItUp({
       animation: {
@@ -239,7 +258,12 @@
     });
   </script>
 
-
+  <!-- date -->
+  <script>
+    $('#datepicker').datepicker({
+      uiLibrary: 'bootstrap4'
+    });
+  </script>
 
 </body>
 

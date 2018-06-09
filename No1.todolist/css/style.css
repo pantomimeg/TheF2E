@@ -4,6 +4,26 @@ body {
   background: url(../img/egg_bg.svg)50% 0 no-repeat fixed;
 }
 
+input,
+button {
+  padding: 0;
+  border: none;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  background-color: transparent;
+}
+
+input:focus,
+button:focus,
+textarea:focus {
+  outline: 0 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
 #wrap {
   margin: 0 auto;
 }
@@ -14,44 +34,47 @@ body {
   height: 10rem;
   top: .3rem;
   background-color: #c36919;
-  border-radius: 10rem 10rem .5rem .5em;
-  box-shadow: 0px -6px 50px 13px rgba(165, 60, 0, 0.5) inset, 0px 2px 3px 0px rgba(155, 85, 0, .1);
+  border-radius: 10rem 10rem .8rem .8em;
+  box-shadow: 0px -6px 50px 13px rgba(165, 60, 0, 0.5) inset, 1px -5px 12px 0 rgba(165, 60, 0, 0.8) inset, 0px 2px 3px 0px rgba(155, 85, 0, .1);
 }
 
 .sesame-l {
   width: 4.2rem;
   height: 4.2rem;
   margin-top: 2.5rem;
+  cursor: pointer;
   border-width: 0px;
   border-color: transparent;
   border-radius: 250px 10px 170px 100px / 170px 10px 250px 100px;
   background-color: #ffeab0;
   transform: scale(0.95, 1) rotate(-10deg);
-  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 0px 2px 5px 1px rgba(55, 20, 0, 0.4);
+  box-shadow: 0px -2px 12px 4px rgba(195, 105, 0, 0.5) inset, 1px -4px 12px -2px rgba(195, 105, 0, 0.8) inset, 0px 2px 5px 1px rgba(145, 45, 0, .8);
 }
 
 .sesame-c {
   width: 4.2rem;
   height: 4.2rem;
   margin-top: 3rem;
+  cursor: pointer;
   border-width: 0px;
   border-color: transparent;
   border-radius: 250px 10px 170px 120px / 170px 10px 250px 120px;
   background-color: #ffeab0;
   transform: scale(0.95, 1) rotate(-45deg);
-  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 0px 2px 5px 1px rgba(55, 20, 0, 0.4);
+  box-shadow: 0px -2px 12px 4px rgba(195, 105, 0, 0.5) inset, 10px -8px 15px -9px rgba(195, 105, 0, .8) inset, 0px 2px 5px 1px rgba(145, 45, 0, .8)
 }
 
 .sesame-r {
   width: 4.2rem;
   height: 4.2rem;
   margin-top: 2.5rem;
+  cursor: pointer;
   border-width: 0px;
   border-color: transparent;
   border-radius: 250px 10px 170px 100px / 170px 10px 250px 100px;
   background-color: #ffeab0;
   transform: scale(0.95, 1) rotate(-80deg);
-  box-shadow: 2px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, -2px 2px 5px 1px rgba(55, 20, 0, 0.4);
+  box-shadow: 2px -2px 12px 4px rgba(195, 105, 0, 0.5) inset, 6px -2px 12px -3px rgba(195, 105, 0, 0.8) inset, -2px 2px 5px 1px rgba(145, 45, 0, .8);
 }
 
 .sesame-l svg {
@@ -75,31 +98,59 @@ body {
   transform: scale(0.95, 1) rotate(80deg);
 }
 
-button svg:hover {
-  opacity: .6;
+.sesame-l:focus svg,
+.sesame-c:focus svg,
+.sesame-r:focus svg {
+  color: #ffbb00;
+  transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
 }
 
-.sesame-l:hover {
-  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 2px 4px 12px 0px rgba(55, 20, 0, 0.15);
+.sesame-l:hover,
+.sesame-l:focus {
+  margin-top: 2.2rem;
+  box-shadow: 0px -2px 12px 4px rgba(195, 105, 0, 0.5) inset, 1px -4px 12px -2px rgba(195, 105, 0, .8) inset, 1px 8px 16px 2px rgba(145, 45, 0, .3);
+  transition: .3s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
 }
 
-.sesame-c:hover {
-  box-shadow: 0px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 2px 4px 12px 0px rgba(55, 20, 0, 0.15);
+.sesame-c:hover,
+.sesame-c:focus {
+  margin-top: 2.7rem;
+  box-shadow: 0px -2px 12px 4px rgba(195, 105, 0, 0.5) inset, 10px -8px 15px -9px rgba(195, 105, 0, 0.8) inset, -4px 8px 16px 2px rgba(145, 45, 0, .3);
+  transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
 }
 
-.sesame-r:hover {
-  box-shadow: 2px -2px 12px 4px rgba(197, 105, 0, 0.49) inset, 0px 4px 12px 0px rgba(55, 20, 0, 0.15);
+.sesame-r:hover,
+.sesame-r:focus {
+  margin-top: 2.2rem;
+  box-shadow: 2px -2px 12px 4px rgba(195, 105, 0, 0.5) inset, 6px -2px 12px -3px rgba(195, 105, 0, 0.8) inset, -10px 4px 16px 2px rgba(145, 45, 0, .3);
+  transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
 }
 
 button+button {
-  margin-left: 2.5rem;
+  margin-left: 1rem;
+}
+
+.courses .mix-target {
+  display: none;
 }
 
 /*------------------ main ------------------*/
 
 #main {
   padding: 1.8rem 1.5rem .2rem 1.5rem;
-  margin: 0 .3rem 0 .3rem;
+  margin: 0 .5rem 0 .5rem;
   background-color: #ffefc0;
   box-shadow: 0 20px 10px -13px #7e3b00ba inset, 0 -13px 8px -13px #7e3b00bf inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2);
 }
@@ -220,9 +271,11 @@ button+button {
 }
 
 .card-body {
-  padding: 1.25rem 1.8rem;
+  padding: 1.25rem 1.2rem;
   background-color: rgba(255, 185, 0, 0.1);
 }
+
+/*------------------ add task ------------------*/
 
 .add-todo .card-header {
   padding: .7rem 1rem .6rem 1rem;
@@ -234,36 +287,113 @@ button+button {
   border-bottom: 3px solid #ffbb00;
 }
 
+.task-title {
+  width: 80%;
+  margin-top: .2rem;
+  margin-left: .2rem;
+  color: rgba(255, 187, 0, 0.4);
+}
+
 .add-todo p {
   display: inline;
-  margin-top: .2rem;
-  margin-left: .6rem;
+  margin-left: .2rem;
   font-size: 1.2rem;
-  color: rgba(255, 187, 0, 0.4);
+  color: #ffbb00;
 }
 
 .add-todo .fa-pencil-alt {
   float: right;
   margin: .2rem 0 0 .2rem;
   font-size: 1.2rem;
-  color: rgba(255, 187, 0, 0.4);
-}
-
-.add-todo p:hover,
-.add-todo .fa-pencil-alt:hover {
-  color: rgb(255, 187, 0);
+  color: rgba(255, 187, 0, 0.3);
   transition: .3s;
   -moz-transition: .3s;
   -webkit-transition: .3s;
   -o-transition: .3s;
 }
 
-.add-todo:hover {
-  box-shadow: 1px 3px 5px 0px rgba(150, 50, 0, .25);
+.add-todo:hover .fa-pencil-alt {
+  color: #ffbb00;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
 }
 
-.courses .mix-target {
+.add-todo:hover,
+.collapse.show {
+  box-shadow: 0px 10px 8px -5px rgba(150, 50, 0, .14);
+}
+
+.add-todo label {
+  display: inline;
+}
+
+input[placeholder],
+[placeholder],
+[placeholder]:focus {
+  color: #642d00;
+}
+
+.gj-datepicker-bootstrap [role=right-icon] button {
+  color: #fff;
+  border: 1px solid #ffbb00;
+  background-color: #ffbb00;
+}
+
+.gj-datepicker-bootstrap [role=right-icon] button:hover {
+  color: #ffbb00;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active {
+  color: #fff;
+  border: 1px solid #ffbb00;
+  background-color: #ffbb00;
+}
+
+.gj-modal {
+  background-color: #ffbb00;
+}
+
+.gj-picker-bootstrap div[role="navigator"] {
+  color: #ffbb00;
+}
+
+.gj-picker-bootstrap tr[role="week-days"] {
+  color: #999;
+}
+
+.form-control {
+  border: 1px solid #ffbb00;
+}
+
+.form-control-file {
   display: none;
+}
+
+.fa-plus-square {
+  margin-left: 1.5rem;
+  color: #ffbb00;
+  cursor: pointer;
+}
+
+.fa-plus-square:hover {
+  opacity: .6;
+}
+
+.cancel {
+  margin-top: 1rem;
+  color: #dc3545;
+}
+
+.addTask {
+  margin-top: 1rem;
+  color: #28a745;
+}
+
+.cancel:hover,
+.addTask:hover {
+  opacity: .4;
 }
 
 /*------------------ footer ------------------*/
@@ -271,8 +401,8 @@ button+button {
 #footer {
   height: 3rem;
   background-color: #c36919;
-  border-radius: .5rem .5em 3rem 3rem;
-  box-shadow: 0px -3px 20px 3px rgba(165, 60, 0, 0.5) inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2);
+  border-radius: .8rem .8em 3rem 3rem;
+  box-shadow: 0px -3px 20px 3px rgba(165, 60, 0, 0.5) inset, 0px -7px 30px -2px rgba(165, 60, 0, 0.8) inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2);
 }
 
 @media (max-width: 575.98px) {
@@ -289,10 +419,10 @@ button+button {
   }
   .sesame-l,
   .sesame-r {
-    margin-top: 2.2rem;
+    margin-top: 2rem;
   }
   .sesame-c {
-    margin-top: 2.8rem;
+    margin-top: 2.6rem;
   }
   button+button {
     margin-left: 1rem;

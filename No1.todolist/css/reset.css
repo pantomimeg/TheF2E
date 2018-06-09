@@ -130,11 +130,14 @@ table {
     border-spacing: 0;
 }
 
-input,button {
-    padding: 0;
-    border-color: transparent;
-    border-style: none;
-    border-width: 0;
-    background-color: transparent;
-    outline:0;
-}
+
+/* input:focus,
+button:focus,
+textarea:focus,
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-secondary.dropdown-toggle:focus {
+    box-shadow: none;
+    outline: 0 !important;
+} */
+
