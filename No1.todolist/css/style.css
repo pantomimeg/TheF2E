@@ -183,7 +183,7 @@ button+button {
 }
 
 .card-header {
-  padding: .6rem .7rem .6rem .3rem;
+  padding: .6rem .7rem .6rem .7rem;
   background-color: rgba(255, 185, 0, 0.5);
   border-bottom: 1px solid #642d00;
   transition: .3s;
@@ -193,7 +193,6 @@ button+button {
 }
 
 .card-header a {
-  margin-left: .2rem;
   font-size: 1.2rem;
   color: #642d00;
   transition: .3s;
@@ -215,6 +214,12 @@ button+button {
 
 .card-header svg {
   margin-left: .3rem;
+}
+
+.fa-circle,
+.fa-check-circle,
+.fa-star {
+  font-size: 1rem;
 }
 
 .star-btn {
