@@ -35,7 +35,7 @@ button {
   top: .3rem;
   background-color: #c36919;
   border-radius: 10rem 10rem .8rem .8em;
-  box-shadow: 0px -6px 50px 13px rgba(165, 60, 0, 0.5) inset, 1px -5px 12px 0 rgba(165, 60, 0, 0.8) inset, 0px 2px 3px 0px rgba(155, 85, 0, .1);
+  box-shadow: 0px -14px 60px 5px rgba(165, 60, 0, 0.4) inset, 0px -5px 30px 0 rgba(165, 60, 0, 0.8) inset, 0px -25px 60px 5px rgba(255, 208, 116, 0.5) inset, 0px 2px 3px 0px rgba(155, 85, 0, .1)
 }
 
 .sesame-l {
@@ -99,8 +99,11 @@ button {
 }
 
 .sesame-l:focus svg,
+.sesame-l.active svg,
 .sesame-c:focus svg,
-.sesame-r:focus svg {
+.sesame-c.active svg,
+.sesame-r:focus svg,
+.sesame-r.active svg {
   color: #ffbb00;
   transition: .2s;
   -moz-transition: .2s;
@@ -109,6 +112,7 @@ button {
 }
 
 .sesame-l:hover,
+.sesame-l.active,
 .sesame-l:focus {
   margin-top: 2.2rem;
   box-shadow: 0px -2px 12px 4px rgba(195, 105, 0, 0.5) inset, 1px -4px 12px -2px rgba(195, 105, 0, .8) inset, 1px 8px 16px 2px rgba(145, 45, 0, .3);
@@ -119,6 +123,7 @@ button {
 }
 
 .sesame-c:hover,
+.sesame-c.active,
 .sesame-c:focus {
   margin-top: 2.7rem;
   box-shadow: 0px -2px 12px 4px rgba(195, 105, 0, 0.5) inset, 10px -8px 15px -9px rgba(195, 105, 0, 0.8) inset, -4px 8px 16px 2px rgba(145, 45, 0, .3);
@@ -129,6 +134,7 @@ button {
 }
 
 .sesame-r:hover,
+.sesame-r.active,
 .sesame-r:focus {
   margin-top: 2.2rem;
   box-shadow: 2px -2px 12px 4px rgba(195, 105, 0, 0.5) inset, 6px -2px 12px -3px rgba(195, 105, 0, 0.8) inset, -10px 4px 16px 2px rgba(145, 45, 0, .3);
@@ -179,7 +185,7 @@ button+button {
 .card-header {
   padding: .6rem 1rem .6rem 1rem;
   background-color: rgba(255, 185, 0, 0.5);
-  border-bottom: .5px solid #642d00;
+  border-bottom: 1px solid #642d00;
   transition: .3s;
   -moz-transition: .3s;
   -webkit-transition: .3s;
@@ -200,7 +206,7 @@ button+button {
   margin-bottom: 0;
   font-size: .5rem;
   color: rgba(195, 100, 0, 0.8);
-  margin-left: 1.5rem;
+  margin-left: 2rem;
   transition: .3s;
   -moz-transition: .3s;
   -webkit-transition: .3s;
@@ -271,15 +277,16 @@ button+button {
 }
 
 .card-body {
-  padding: 1.25rem 1.2rem;
-  background-color: rgba(255, 185, 0, 0.1);
+  padding: 1.25rem 2rem;
+  color: #642d00;
+  background-color: rgba(255, 185, 0, 0.05);
 }
 
 /*------------------ add task ------------------*/
 
 .add-todo .card-header {
-  padding: .7rem 1rem .6rem 1rem;
-  border-bottom: .5px solid #ffbb00;
+  padding: .6rem 1rem .6rem 1rem;
+  border-bottom: 1px solid #ffbb00;
   background-color: rgba(255, 185, 0, .1);
 }
 
@@ -301,18 +308,10 @@ button+button {
   color: #ffbb00;
 }
 
-.add-todo .fa-pencil-alt {
+.add-todo span .fa-plus {
   float: right;
-  margin: .2rem 0 0 .2rem;
+  margin: .3rem .2rem 0 .2rem;
   font-size: 1.2rem;
-  color: rgba(255, 187, 0, 0.3);
-  transition: .3s;
-  -moz-transition: .3s;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-}
-
-.add-todo:hover .fa-pencil-alt {
   color: #ffbb00;
   transition: .3s;
   -moz-transition: .3s;
@@ -320,8 +319,16 @@ button+button {
   -o-transition: .3s;
 }
 
+.add-todo:hover span .fa-plus {
+  opacity: .4;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+}
+
 .add-todo:hover,
-.collapse.show {
+.add-todo .collapse.show {
   box-shadow: 0px 10px 8px -5px rgba(150, 50, 0, .14);
 }
 
@@ -396,14 +403,79 @@ input[placeholder],
   opacity: .4;
 }
 
+/*------------------ edit-delete ------------------*/
+
+#edit-delete {
+  top: 1.5rem;
+  margin-top: -2.2rem;
+  padding: 0;
+}
+
+.edit {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: .5rem;
+  color: #ffeab0;
+  border-radius: 50%;
+  background-color: #ffeab0;
+  box-shadow: 0px -6px 15px 1px rgba(195, 105, 0, .4) inset, -1px -4px 7px -2px rgba(195, 105, 0, .8) inset, 0px 3px 8px 0px rgba(145, 45, 0, .8);
+}
+
+.delete {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: .5rem;
+  color: #dc3545;
+  border-radius: 50%;
+  background-color: #ffeab0;
+  box-shadow: 0px -6px 15px 1px rgba(195, 105, 0, .4) inset, -1px -4px 7px -2px rgba(195, 105, 0, .8) inset, 0px 3px 8px 0px rgba(145, 45, 0, .8);
+}
+
+.edit:hover,
+.delete:hover {
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-top: .2rem;
+  box-shadow: 0px -6px 15px 1px rgba(195, 105, 0, .4) inset, -1px -4px 7px -2px rgba(195, 105, 0, .8) inset, 0px 7px 10px 0px rgba(145, 45, 0, .4);
+}
+
+.edit svg,
+.delete svg {
+  margin-left: .1rem;
+  font-size: 1.2rem;
+  color: #642d00;
+}
+
+.edit:hover svg,
+.delete:hover svg {
+  opacity: .4;
+}
+
 /*------------------ footer ------------------*/
 
 #footer {
   height: 3rem;
   background-color: #c36919;
   border-radius: .8rem .8em 3rem 3rem;
-  box-shadow: 0px -3px 20px 3px rgba(165, 60, 0, 0.5) inset, 0px -7px 30px -2px rgba(165, 60, 0, 0.8) inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2);
+  box-shadow: 0px -3px 20px 3px rgba(165, 60, 0, 0.5) inset, 0px -7px 30px -2px rgba(165, 60, 0, 0.8) inset, 0px 12px 40px 5px rgba(255, 208, 116, 0.5) inset, 1px 1px 5px 1px rgba(55, 20, 0, 0.2)
 }
+
+#copyright {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: .8rem;
+  color: rgba(195, 105, 25, .4);
+}
+
+#copyright p{
+  margin-bottom: 0rem;
+}
+
+.copyright_lines {
+  display: none;
+}
+
+/*------------------------------------ max-width: 575.98px ------------------------------------*/
 
 @media (max-width: 575.98px) {
   body {
@@ -429,6 +501,101 @@ input[placeholder],
   }
   /*------------------ main ------------------*/
   #main {
-    padding: 1.5rem 1.2rem .2rem 1.2rem;
+    padding: 1.5rem 1rem .2rem 1rem;
+  }
+  .card-header {
+    padding: .6rem .5rem .6rem .5rem;
+  }
+  .card-header a {
+    margin-left: 0rem;
+    font-size: 1rem;
+  }
+  .card-header p {
+    font-size: .2rem;
+    margin-left: 1.3rem;
+  }
+  .star-btn {
+    padding-right: .2rem;
+  }
+  .add-todo .card-header {
+    padding: .6rem .8rem .7rem .8rem;
+  }
+  .add-todo span .fa-plus {
+    margin: .3rem 0rem 0 .2rem;
+    font-size: 1rem;
+  }
+  .card-body {
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(255, 185, 0, 0.05);
+  }
+  /*------------------ footer ------------------*/
+  .copyright_line {
+    display: none;
+  }
+    .copyright_lines {
+      display: block;
+    }
+}
+
+/*------------------------------------ max-width: 320.98px ------------------------------------*/
+
+@media (max-width: 320.98px) {
+  #header {
+    height: 7.5rem;
+  }
+  .sesame-l,
+  .sesame-r {
+    width: 3.8rem;
+    height: 3.8rem;
+    margin-top: 1.6rem;
+  }
+  .sesame-c {
+    width: 3.8rem;
+    height: 3.8rem;
+    margin-top: 2.2rem;
+  }
+  .sesame-l.active,
+  .sesame-l:hover,
+  .sesame-l:focus,
+  .sesame-r:hover,
+  .sesame-r.active,
+  .sesame-r:focus {
+    margin-top: 1.7rem;
+  }
+  .sesame-c:hover,
+  .sesame-c.active,
+  .sesame-c:focus {
+    margin-top: 2.3rem;
+  }
+  button+button {
+    margin-left: 1.2rem;
+  }
+  button+button {
+    margin-left: 0;
+  }
+  /*------------------ main ------------------*/
+  .cancel {
+    margin-top: .5rem;
+    font-size: .8rem;
+  }
+  .addTask {
+    margin-top: .5rem;
+    font-size: .8rem;
+  }
+  .edit,
+  .delete {
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-left: .8rem;
+  }
+  .edit:hover,
+  .delete:hover {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .edit svg,
+  .delete svg {
+    margin-left: 0rem;
+    font-size: 1.1rem;
   }
 }

@@ -59,7 +59,6 @@
         </div>
       </div>
 
-
       <!--main-->
       <div class="courses" id="main">
         <ul id="accordion">
@@ -69,8 +68,10 @@
             <div class="card add-todo">
               <a class="card-link closeCard" data-toggle="collapse" href="#collapse_000">
                 <div class="card-header">
-                  <input type="text" class="task-title" name="title" placeholder="Add a New Task">
-                  <i class="fas fa-pencil-alt"></i>
+                  <input type="text" class="task-title" name="title" placeholder="Type Something Here…">
+                  <span>
+                    <i class="fas fa-plus"></i>
+                  </span>
                 </div>
               </a>
               <div id="collapse_000" class="collapse" data-parent="#accordion">
@@ -83,7 +84,7 @@
                       <div>
                         <label for="datepicker">
                         </label>
-                        <input type="datetime" id="datepicker" name="datetime" placeholder="datetime">
+                        <input type="datetime" id="datepicker" name="datetime" placeholder="mm/dd/yyyy">
                       </div>
                     </div>
                     <div class="form-group">
@@ -104,7 +105,7 @@
                         </p>
                         <div>
                       </label>
-                      <textarea class="form-control" id="add-text" rows="3" name="text" placeholder="text"></textarea>
+                      <textarea class="form-control" id="add-text" rows="3" name="text" placeholder="Type your memo here…"></textarea>
                       </div>
                     </div>
                   </form>
@@ -116,7 +117,6 @@
                   </div>
                 </div>
               </div>
-            </div>
           </li>
 
           <!--card_001-->
@@ -198,37 +198,39 @@
 
         </ul>
 
+        <div id="edit-delete" class="col-sm-12 d-flex justify-content-end">
+          <button class="edit">
+            <i class="fas fa-pencil-alt"></i>
+          </button>
+          <button class="delete">
+            <i class="far fa-trash-alt"></i>
+          </button>
+        </div>
+        </div>
+
+        <div id="footer"></div>
+
+        <div id="copyright">
+          <div class="copyright_line">
+            <p>[The F2E - No1.todolist] Designed by Pantomimeg.</p>
+          </div>
+          <div class="copyright_lines">
+            <p>[The F2E - No1.todolist]</p>
+            <p>Designed by Pantomimeg.</p>
+          </div>
+
+        </div>
+
+
+
       </div>
-      <div id="footer"></div>
     </div>
-  </div>
 
-  <!-- icon star -->
-  <script>
-    $('.star-btn').on('click', function () {
-      $(this).parent().parent().toggleClass('stared');
-      $(this).parent().toggleClass('stared-header');
-      let obj = $(this).find("[data-fa-i2svg]");
-      let currentStyle = obj.data('prefix');
-      if (currentStyle === 'fas') {
-        obj.toggleClass('fas').toggleClass('far')
-      } else {
-        obj.toggleClass('far').toggleClass('fas')
-      }
-    });
-  </script>
-
-  <!-- checked -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      $('.check-btn').on('click', function () {
-        $(this).parent().parent().parent().toggleClass('inProgress').toggleClass('completed');
-        $(this).parent().parent().toggleClass('done');
-        $(this).parent().toggleClass('done-header');
-        $(this)
-          .find('[data-fa-i2svg]')
-          .toggleClass('fa-circle')
-          .toggleClass('fa-check-circle');
+    <!-- icon star -->
+    <script>
+      $('.star-btn').on('click', function () {
+        $(this).parent().parent().toggleClass('stared');
+        $(this).parent().toggleClass('stared-header');
         let obj = $(this).find("[data-fa-i2svg]");
         let currentStyle = obj.data('prefix');
         if (currentStyle === 'fas') {
@@ -237,33 +239,54 @@
           obj.toggleClass('far').toggleClass('fas')
         }
       });
-    });
-  </script>
+    </script>
 
-  <!-- select -->
-  <script>
-    $('#main').mixItUp({
-      animation: {
-        duration: 500
-      },
-      selectors: {
-        target: '.mix-target',
-        filter: '.filter-btn',
-      },
-      callbacks: {
-        onMixEnd: function (state) {
-          console.log(state)
+    <!-- checked -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        $('.check-btn').on('click', function () {
+          $(this).parent().parent().parent().toggleClass('inProgress').toggleClass('completed');
+          $(this).parent().parent().toggleClass('done');
+          $(this).parent().toggleClass('done-header');
+          $(this)
+            .find('[data-fa-i2svg]')
+            .toggleClass('fa-circle')
+            .toggleClass('fa-check-circle');
+          let obj = $(this).find("[data-fa-i2svg]");
+          let currentStyle = obj.data('prefix');
+          if (currentStyle === 'fas') {
+            obj.toggleClass('fas').toggleClass('far')
+          } else {
+            obj.toggleClass('far').toggleClass('fas')
+          }
+        });
+      });
+    </script>
+
+    <!-- select -->
+    <script>
+      $('#main').mixItUp({
+        animation: {
+          duration: 500
+        },
+        selectors: {
+          target: '.mix-target',
+          filter: '.filter-btn',
+        },
+        callbacks: {
+          onMixEnd: function (state) {
+            console.log(state)
+          }
         }
-      }
-    });
-  </script>
+      });
+    </script>
 
-  <!-- date -->
-  <script>
-    $('#datepicker').datepicker({
-      uiLibrary: 'bootstrap4'
-    });
-  </script>
+    <!-- date -->
+    <script>
+      $('#datepicker').datepicker({
+        uiLibrary: 'bootstrap4'
+      });
+    </script>
 
 </body>
 
