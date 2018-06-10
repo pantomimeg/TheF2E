@@ -235,7 +235,7 @@ button+button {
 }
 
 .done-header {
-  border-bottom: .5px solid #fff;
+  border-bottom: 1px solid #fff;
   background-color: #28a745 !important;
   transition: .3s;
   -moz-transition: .3s;
@@ -263,7 +263,7 @@ button+button {
 }
 
 .stared-header {
-  border-bottom: .5px solid #fff;
+  border-bottom: 1px solid #fff;
   background-color: #dc3545;
   transition: .3s;
   -moz-transition: .3s;
