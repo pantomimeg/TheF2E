@@ -512,9 +512,10 @@ input[placeholder],
   }
   .card-header p {
     font-size: .9rem;
-    margin-left: 1.6rem;
+    margin-left: 1.8rem;
   }
   .fa-circle,
+  .fa-check-circle,
   .fa-star {
     font-size: 1.3rem;
   }
