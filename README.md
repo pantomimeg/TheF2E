@@ -1,6 +1,6 @@
 # TheF2E 精神時光屋
 
-**`主題挑戰`** [link](http://www.hexschool.com/2018/05/09/2018-05-09-the_f2e/_
+**`主題挑戰`** [link](http://www.hexschool.com/2018/05/09/2018-05-09-the_f2e/)
 
 ------
 
