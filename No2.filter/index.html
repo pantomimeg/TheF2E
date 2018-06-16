@@ -40,163 +40,15 @@
 </head>
 
 <body>
-  <div id="wrap" class="d-flex justify-content-center">
+  <div id="wrap-all" class="d-flex justify-content-center">
     <div class="col-sm-11 col-md-10">
       <div id="header">
-        <h1>EG's HOTEL</h1>
+        <a href="index.html">
+          <h1>EG's HOTEL</h1>
+        </a>
       </div>
 
-      <div id="main">
-        <div id="windows" class="col-12">
-
-          <div id="content" class="content-normal">
-<div class="row room-info">
-<div class="col-6">
-<h2>dewewf</h2>
-</div>
-<div class="col-6">
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, voluptatum?</p>
-</div>
-</div>
-
-
-          </div>
-
-          <div id="filter" class="p-fixed">
-            <input type="checkbox" id="menu-toggle" />
-            <label id="trigger" for="menu-toggle"></label>
-            <label id="burger" for="menu-toggle">
-              <i class="fas fa-search"></i>
-            </label>
-            <div id="menu" class="row justify-content-center">
-              <form>
-                <div class="row justify-content-center f-title">
-                  <div class="col-12 pd-10">
-                    <h3>SEARCH</h3>
-                  </div>
-                </div>
-
-                <div class="f-select">
-                  <div class="row justify-content-center mg-b08">
-                    <div class="col-12 pd-10">
-                      <input type="text" class="form-control" placeholder="KEYWORDS">
-                    </div>
-                  </div>
-
-                  <div class="row justify-content-center mg-b08">
-                    <div class="col-6 pd-10">
-                      <h4>CHECK IN</h4>
-
-                      <label for="checkIn" class="d-in"></label>
-                      <input type="datetime" id="checkIn" name="checkIn" placeholder="mm/dd/yyyy">
-                    </div>
-                    <div class="col-6 pd-10">
-                      <h4>CHECK OUT</h4>
-                      <label for="checkOut" class="d-in"></label>
-                      <input type="datetime" id="checkOut" name="checkOut" placeholder="mm/dd/yyyy">
-                    </div>
-                  </div>
-
-                  <div class="row justify-content-center mg-b08">
-                    <div class="col-4 pd-10">
-                      <h4>ROOM</h4>
-                      <select class="form-control">
-                        <option>--</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
-                    <div class="col-4 pd-10">
-                      <h4>ADULT</h4>
-                      <select class="form-control">
-                        <option>--</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
-                    <div class="col-4 pd-10">
-                      <h4>CHILD</h4>
-                      <select class="form-control">
-                        <option>--</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="row justify-content-center">
-                    <div class="col-12 pd-10">
-                      <h4>PREFERENCES</h4>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center">
-                    <div class="col-2 pd-10">
-                      <input type="checkbox" id="f-bath">
-                      <label id="f-bath-bt" for="f-bath">
-                        <i class="fas fa-bath"></i>
-                      </label>
-                    </div>
-
-                    <div class="col-2 pd-10">
-                      <input type="checkbox" id="f-shower">
-                      <label id="f-shower-bt" for="f-shower">
-                        <i class="fas fa-shower"></i>
-                      </label>
-                    </div>
-
-                    <div class="col-2 pd-10">
-                      <input type="checkbox" id="f-tv">
-                      <label id="f-tv-bt" for="f-tv">
-                        <i class="fas fa-tv"></i>
-                      </label>
-                    </div>
-
-                    <div class="col-2 pd-10">
-                      <input type="checkbox" id="f-utensils">
-                      <label id="f-utensils-bt" for="f-utensils">
-                        <i class="fas fa-utensils"></i>
-                      </label>
-                    </div>
-
-                    <div class="col-2 pd-10">
-                      <input type="checkbox" id="f-wifi">
-                      <label id="f-wifi-bt" for="f-wifi">
-                        <i class="fas fa-wifi"></i>
-                      </label>
-                    </div>
-
-                    <div class="col-2 pd-10">
-                      <input type="checkbox" id="f-paw">
-                      <label id="f-paw-bt" for="f-paw">
-                        <i class="fas fa-paw"></i>
-                      </label>
-                    </div>
-
-
-                  </div>
-                </div>
-
-                <div class="row justify-content-center f-bt  pd-10">
-                  <div class="col-12 okay">
-                    <label for="menu-toggle">FILTER</label>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
+      <iframe src="content.html" frameborder="0" scrolling="auto" class="col-12" name="content"></iframe>
 
 
       <div id="footer">
@@ -213,34 +65,6 @@
     </div>
   </div>
 
-
-
-
-  <!-- search -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      $('#menu-toggle').on('click', function () {
-        $('#content').toggleClass('hide');
-        $('#filter').toggleClass('p-fixed');
-        $('#burger')
-          .find('[data-fa-i2svg]')
-          .toggleClass('fa-search')
-          .toggleClass('fa-arrow-left');
-      });
-    });
-  </script>
-
-  <!-- date -->
-  <script>
-    $('#checkIn').datepicker({
-      uiLibrary: 'bootstrap4'
-    });
-  </script>
-  <script>
-    $('#checkOut').datepicker({
-      uiLibrary: 'bootstrap4'
-    });
-  </script>
 
 </body>
 

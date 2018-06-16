@@ -2,9 +2,9 @@ body {
   height: 100vh;
   font-family: 'Work Sans', sans-serif;
   color: #666;
-  background: url(../img/bg.jpg) no-repeat fixed #b32b00;
-  background-size: cover;
-  overflow: hidden;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 input,
@@ -19,7 +19,8 @@ button {
 
 input:focus,
 button:focus,
-textarea:focus {
+textarea:focus,
+a {
   outline: 0 !important;
 }
 
@@ -27,9 +28,34 @@ button {
   cursor: pointer;
 }
 
-h1 {
-  font-family: 'Fredericka the Great', cursive;
-  color: #fff;
+h3 {
+  margin: 1.8rem 0 1.8rem 0;
+  padding-bottom: .8rem;
+  color: #ff6800;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 2px solid #ff6800;
+}
+
+h4 {
+  margin-top: 1rem;
+  padding-left: .2rem;
+  color: rgba(255, 102, 0, 0.5);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+h2 {
+  padding-bottom: .4rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+img {
+  margin: 0 auto;
+  width: 100%;
 }
 
 .pd-0 {
@@ -66,9 +92,17 @@ h1 {
   display: block;
 }
 
-#wrap {
+#wrap-all {
   margin: 0 auto;
   height: 100vh;
+  background: url(../img/bg.jpg) no-repeat fixed #b32b00;
+  background-size: cover;
+}
+
+#wrap {
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /*------------------ header ------------------*/
@@ -79,40 +113,209 @@ h1 {
   text-align: center;
 }
 
+#header a {
+  color: transparent;
+}
+
+#header h1 {
+  font-family: 'Fredericka the Great', cursive;
+  color: #fff;
+}
+
+#header a:hover h1 {
+  opacity: .6;
+  transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+}
+
 /*------------------ main ------------------*/
 
-#main {
+iframe {
   height: 82vh;
   box-shadow: 0px 2px 8px 2px rgba(140, 35, 0, .5);
   background-color: rgb(255, 250, 245);
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 #windows {
-  height: 82vh;
   background-color: #fff;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 #filter {
-  height: 82vh;
+  height: 100vh;
   background-color: #fff;
   z-index: 5;
-}
-
-#content {
-  padding: 3.5rem;
-  float: right;
-  width: 100%;
-  background-color: #fff;
-  z-index: 1;
 }
 
 .filter-info {
   float: right;
   width: 100%;
+}
+
+/*------------------ content ------------------*/
+
+#content {
+  margin-right: 0px;
+  padding: 2rem 1.5rem;
+  float: right;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.r-list {
+  margin-bottom: 1.5rem;
+}
+
+.r-link {
+  display: block;
+  height: 100%;
+  border-bottom: 4px solid rgba(255, 104, 0, .5);
+  border-radius: .8rem;
+  background-color: #fffaf5;
+  overflow: hidden;
+}
+
+.r-link:hover {
+  opacity: .8;
+  background-color: rgba(255, 250, 245, 0.25);
+  box-shadow: 0px 6px 10px -4px rgba(255, 104, 0, .4);
+  transform: scale(1.02);
+  transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+}
+
+.r-info {
+  padding: .8rem 1.5rem .8rem 1.5rem;
+}
+
+.r-list a {
+  color: #ff6800;
+  text-decoration: none;
+}
+
+.r-info p {
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+  color: #666;
+  word-break: break-all;
+}
+
+.r-tag {
+  margin: 0 auto;
+  bottom: 0;
+  text-align: center;
+}
+
+.r-tag svg {
+  width: 1rem;
+  margin: 0 .2rem;
+  color: rgba(255, 102, 0, .6);
+}
+
+.tag-none svg {
+  color: rgba(255, 102, 0, .15);
+}
+
+.r-img {
+  position: relative;
+}
+
+.r-img div {
+  position: absolute;
+  bottom: .2rem;
+  left: .5rem;
+}
+
+.r-img svg {
+  font-size: 1rem;
+  margin: 0 .1rem;
+  color: #fffaf5;
+}
+
+/*------------------ room ------------------*/
+
+#back-i {
+  z-index: 10;
+}
+
+#back {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #fffaf5;
+  border-bottom-right-radius: 75%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  animation: not-checked-anim .2s both;
+  transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+}
+
+#back-i svg {
+  position: absolute;
+  top: .7rem;
+  left: .7rem;
+  font-size: 1.5rem;
+  color: #ff6800;
+  cursor: pointer;
+  z-index: 1;
+  transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+}
+
+#back-i:hover svg {
+  opacity: .6;
+  transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+}
+
+.room-info {
+  margin-top: 1.8rem;
+  word-break: break-all;
+  text-align: justify;
+}
+
+.room-title h3 {
+  margin: 0 0 1.2rem 0;
+  padding-bottom: .5rem;
+}
+
+.booking {
+  padding: .3rem 0 .2rem 0;
+  margin: 1rem 0 2rem 0;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #fffaf5;
+  border: 2px solid transparent;
+  border-radius: .2rem;
+  background: #ff6800;
+}
+
+.booking:hover {
+  color: #ff6800;
+  border: 2px solid #ff6800;
+  background: transparent;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
 }
 
 /*------------------ footer ------------------*/
@@ -138,6 +341,10 @@ h1 {
   .hd {
     height: 3rem;
   }
+  /*------------------ room ------------------*/
+  /* .room-title {
+    order: -1;
+  } */
   /*------------------ footer ------------------*/
   .copyright_line {
     display: none;

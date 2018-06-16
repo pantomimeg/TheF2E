@@ -1,7 +1,8 @@
+
 @keyframes checked-anim {
     50% {
-        width: 110%;
-        height: 110%;
+        width: 105%;
+        height: 105%;
     }
     100% {
         width: 100%;
@@ -18,22 +19,10 @@
 }
 
 #menu h3 {
-    margin: 1.8rem 0 1.8rem 0;
-    padding-bottom: .8rem;
-    color: #ff6800;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 700;
-    border-bottom: 2px solid #ff6800;
     display: none;
 }
 
 #menu h4 {
-    margin-top: 1rem;
-    padding-left: .2rem;
-    color: rgba(255, 102, 0, 0.5);
-    font-size: 1rem;
-    font-weight: 500;
     display: none;
 }
 
@@ -84,6 +73,9 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     animation: not-checked-anim .2s both;
     transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
 }
 
 #menu-toggle:checked+#trigger+#burger+#menu {
@@ -142,7 +134,7 @@ input[placeholder],
 /*------------------ PREFERENCES ------------------*/
 
 #f-bath,
-#f-shower,
+#f-smoking,
 #f-tv,
 #f-utensils,
 #f-wifi,
@@ -151,7 +143,7 @@ input[placeholder],
 }
 
 #f-bath-bt,
-#f-shower-bt,
+#f-smoking-bt,
 #f-tv-bt,
 #f-utensils-bt,
 #f-wifi-bt,
@@ -170,7 +162,7 @@ input[placeholder],
 }
 
 #f-bath-bt svg,
-#f-shower-bt svg,
+#f-smoking-bt svg,
 #f-tv-bt svg,
 #f-utensils-bt svg,
 #f-wifi-bt svg,
@@ -181,7 +173,7 @@ input[placeholder],
 }
 
 #f-bath-bt:hover,
-#f-shower-bt:hover,
+#f-smoking-bt:hover,
 #f-tv-bt:hover,
 #f-utensils-bt:hover,
 #f-wifi-bt:hover,
@@ -190,7 +182,7 @@ input[placeholder],
 }
 
 #f-bath:checked+#f-bath-bt,
-#f-shower:checked+#f-shower-bt,
+#f-smoking:checked+#f-smoking-bt,
 #f-tv:checked+#f-tv-bt,
 #f-utensils:checked+#f-utensils-bt,
 #f-wifi:checked+#f-wifi-bt,
