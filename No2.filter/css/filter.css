@@ -1,7 +1,7 @@
 @keyframes checked-anim {
     50% {
-        width: 105%;
-        height: 105%;
+        width: 110%;
+        height: 110%;
     }
     100% {
         width: 100%;
@@ -17,7 +17,26 @@
     }
 }
 
-#menu p,
+#menu h3 {
+    margin: 1.8rem 0 1.8rem 0;
+    padding-bottom: .8rem;
+    color: #ff6800;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    border-bottom: 2px solid #ff6800;
+    display: none;
+}
+
+#menu h4 {
+    margin-top: 1rem;
+    padding-left: .2rem;
+    color: rgba(255, 102, 0, 0.5);
+    font-size: 1rem;
+    font-weight: 500;
+    display: none;
+}
+
 #menu a {
     margin: 75px 0 -55px 0;
     color: #ff6800;
@@ -26,14 +45,7 @@
     line-height: 1.8;
     text-decoration: none;
     text-transform: none;
-    list-style: none;
-    outline: 0;
     display: none;
-}
-
-#menu {
-    width: 230px;
-    text-indent: 56px;
 }
 
 #menu a:focus {
@@ -45,7 +57,7 @@
 
 #menu form {
     display: none;
-    width: 100%;
+    width: 80%;
 }
 
 #trigger,
@@ -67,7 +79,7 @@
     padding: 0;
     width: 3.2rem;
     height: 3.2rem;
-    background-color: rgb(255, 250, 245);
+    background-color: #fffaf5;
     border-bottom-right-radius: 75%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     animation: not-checked-anim .2s both;
@@ -79,12 +91,163 @@
     box-shadow: none;
 }
 
-#menu-toggle:checked+#trigger~#menu>div p,
+#menu-toggle:checked+#trigger~#menu>form div h3,
+#menu-toggle:checked+#trigger~#menu>form div div h4,
 #menu-toggle:checked+#trigger~#menu>form {
     display: block;
 }
 
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
+#menu-toggle:not(:checked),
+#menu-toggle:checked {
     display: none;
 }
+
+/*------------------ datetime ------------------*/
+
+input[placeholder],
+[placeholder],
+[placeholder]:focus {
+    color: #642d00;
+}
+
+.gj-datepicker-bootstrap [role=right-icon] button {
+    color: #fff;
+    background-color: #ced4da;
+}
+
+.gj-datepicker-bootstrap [role=right-icon] button:hover {
+    color: #fff;
+    border: 1px solid #ff6800;
+    background-color: #ff6800;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    border: 1px solid #ff6800;
+    background-color: #ff6800;
+}
+
+.gj-modal {
+    background-color: #ff6800;
+}
+
+.gj-picker-bootstrap div[role="navigator"] {
+    color: #ff6800;
+}
+
+.gj-picker-bootstrap tr[role="week-days"] {
+    color: #999;
+}
+
+/*------------------ PREFERENCES ------------------*/
+
+#f-bath,
+#f-shower,
+#f-tv,
+#f-utensils,
+#f-wifi,
+#f-paw {
+    display: none;
+}
+
+#f-bath-bt,
+#f-shower-bt,
+#f-tv-bt,
+#f-utensils-bt,
+#f-wifi-bt,
+#f-paw-bt {
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+    color: #fffaf5;
+    border-radius: .2rem;
+    background: rgba(255, 102, 0, .15);
+    transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+}
+
+#f-bath-bt svg,
+#f-shower-bt svg,
+#f-tv-bt svg,
+#f-utensils-bt svg,
+#f-wifi-bt svg,
+#f-paw-bt svg {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+}
+
+#f-bath-bt:hover,
+#f-shower-bt:hover,
+#f-tv-bt:hover,
+#f-utensils-bt:hover,
+#f-wifi-bt:hover,
+#f-paw-bt:hover {
+    opacity: .6;
+}
+
+#f-bath:checked+#f-bath-bt,
+#f-shower:checked+#f-shower-bt,
+#f-tv:checked+#f-tv-bt,
+#f-utensils:checked+#f-utensils-bt,
+#f-wifi:checked+#f-wifi-bt,
+#f-paw:checked+#f-paw-bt {
+    color: #fffaf5;
+    background: rgba(255, 102, 0, .6);
+    transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+}
+
+.f-select {
+    margin-bottom: 1.2rem;
+}
+
+/*------------------ ok ------------------*/
+
+.okay {
+    cursor: pointer;
+    padding: .2rem 0 .1rem 0;
+    text-align: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #fffaf5;
+    border: 2px solid transparent;
+    border-radius: .2rem;
+    background: #ff6800;
+}
+
+.okay:hover {
+    color: #ff6800;
+    border: 2px solid #ff6800;
+    background: transparent;
+    transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+}
+
+/* .okay svg{
+    margin-right: .2rem;
+    font-size: 1.2rem;
+} */
+
+.okay label {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+/*------------------ search ------------------*/
+
+/* #burger svg {
+    transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+} */
