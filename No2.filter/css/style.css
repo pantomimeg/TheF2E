@@ -249,7 +249,7 @@ img {
 }
 
 #back {
-  position: absolute;
+  position: fixed;
   margin: 0;
   padding: 0;
   top: 0;
@@ -267,7 +267,7 @@ img {
 }
 
 #back-i svg {
-  position: absolute;
+  position: fixed;
   top: .7rem;
   left: .7rem;
   font-size: 1.5rem;
