@@ -45,7 +45,7 @@
     <div class="col-12">
       <div id="content" class="row content-normal">
 
-        <div class="col-12 col-sm-6 col-md-4 pd-10 r-list">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pd-10 r-list">
           <a class="r-link" href="rooms/room01.html">
             <div class="col-12  r-img">
               <img src="img/room01.jpg" alt="room01">
@@ -84,7 +84,7 @@
           </a>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4 pd-10 r-list">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pd-10 r-list">
           <a class="r-link" href="rooms/room02.html">
             <div class="col-12  r-img">
               <img src="img/room02.jpg" alt="room02">
@@ -122,7 +122,7 @@
           </a>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4 pd-10 r-list">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pd-10 r-list">
           <a class="r-link" href="rooms/room03.html">
             <div class="col-12  r-img">
               <img src="img/room03.jpg" alt="room03">
@@ -158,7 +158,7 @@
           </a>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4 pd-10 r-list">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pd-10 r-list">
           <a class="r-link" href="rooms/room04.html">
             <div class="col-12  r-img">
               <img src="img/room04.jpg" alt="room04">
@@ -195,7 +195,7 @@
           </a>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4 pd-10 r-list">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pd-10 r-list">
           <a class="r-link" href="rooms/room05.html">
             <div class="col-12  r-img">
               <img src="img/room05.jpg" alt="room05">
@@ -232,7 +232,7 @@
           </a>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4 pd-10 r-list">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pd-10 r-list">
           <a class="r-link" href="rooms/room06.html">
             <div class="col-12  r-img">
               <img src="img/room06.jpg" alt="room06">
@@ -283,127 +283,129 @@
         </label>
         <div id="menu" class="row justify-content-center">
           <form>
-            <div class="row justify-content-center f-title">
-              <div class="col-12 pd-10">
-                <h3>FILTER</h3>
-              </div>
-            </div>
-
-            <div class="f-select">
-              <div class="row justify-content-center f-gutter">
+            <div class="col-12 col-md-10 col-lg-8 mg-center">
+              <div class="row justify-content-center f-title">
                 <div class="col-12 pd-10">
-                  <input type="text" class="form-control" placeholder="KEYWORDS">
+                  <h3>FILTER</h3>
                 </div>
               </div>
 
-              <div class="row justify-content-center f-gutter">
-                <div class="col-6 pd-10">
-                  <h4>CHECK IN</h4>
-
-                  <label for="checkIn" class="d-in"></label>
-                  <input type="datetime" id="checkIn" name="checkIn" placeholder="mm/dd/yyyy">
+              <div class="f-select">
+                <div class="row justify-content-center f-gutter">
+                  <div class="col-12 pd-10">
+                    <input type="text" class="form-control" placeholder="KEYWORDS">
+                  </div>
                 </div>
-                <div class="col-6 pd-10">
-                  <h4>CHECK OUT</h4>
-                  <label for="checkOut" class="d-in"></label>
-                  <input type="datetime" id="checkOut" name="checkOut" placeholder="mm/dd/yyyy">
+
+                <div class="row justify-content-center f-gutter">
+                  <div class="col-6 pd-10">
+                    <h4>CHECK IN</h4>
+
+                    <label for="checkIn" class="d-in"></label>
+                    <input type="datetime" id="checkIn" name="checkIn" placeholder="mm/dd/yyyy">
+                  </div>
+                  <div class="col-6 pd-10">
+                    <h4>CHECK OUT</h4>
+                    <label for="checkOut" class="d-in"></label>
+                    <input type="datetime" id="checkOut" name="checkOut" placeholder="mm/dd/yyyy">
+                  </div>
+                </div>
+
+                <div class="row justify-content-center f-gutter">
+                  <div class="col-4 pd-10">
+                    <h4>ROOM</h4>
+                    <select class="form-control">
+                      <option>--</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="col-4 pd-10">
+                    <h4>ADULT</h4>
+                    <select class="form-control">
+                      <option>--</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="col-4 pd-10">
+                    <h4>CHILD</h4>
+                    <select class="form-control">
+                      <option>--</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row justify-content-center">
+                  <div class="col-12 pd-10">
+                    <h4>PREFERENCES</h4>
+                  </div>
+                </div>
+                <div class="row justify-content-center tag-pd-10">
+                  <div class="col-2 tag-pd">
+                    <input type="checkbox" id="f-bath">
+                    <label id="f-bath-bt" for="f-bath">
+                      <i class="fas fa-bath"></i>
+                    </label>
+                  </div>
+
+                  <div class="col-2 tag-pd">
+                    <input type="checkbox" id="f-smoking">
+                    <label id="f-smoking-bt" for="f-smoking">
+                      <i class="fas fa-smoking"></i>
+                    </label>
+                  </div>
+
+                  <div class="col-2 tag-pd">
+                    <input type="checkbox" id="f-tv">
+                    <label id="f-tv-bt" for="f-tv">
+                      <i class="fas fa-tv"></i>
+                    </label>
+                  </div>
+
+                  <div class="col-2 tag-pd">
+                    <input type="checkbox" id="f-utensils">
+                    <label id="f-utensils-bt" for="f-utensils">
+                      <i class="fas fa-utensils"></i>
+                    </label>
+                  </div>
+
+                  <div class="col-2 tag-pd">
+                    <input type="checkbox" id="f-wifi">
+                    <label id="f-wifi-bt" for="f-wifi">
+                      <i class="fas fa-wifi"></i>
+                    </label>
+                  </div>
+
+                  <div class="col-2 tag-pd">
+                    <input type="checkbox" id="f-paw">
+                    <label id="f-paw-bt" for="f-paw">
+                      <i class="fas fa-paw"></i>
+                    </label>
+                  </div>
+
+
                 </div>
               </div>
 
-              <div class="row justify-content-center f-gutter">
-                <div class="col-4 pd-10">
-                  <h4>ROOM</h4>
-                  <select class="form-control">
-                    <option>--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="col-4 pd-10">
-                  <h4>ADULT</h4>
-                  <select class="form-control">
-                    <option>--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="col-4 pd-10">
-                  <h4>CHILD</h4>
-                  <select class="form-control">
-                    <option>--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
+              <div class="row justify-content-center f-bt  pd-10">
+                <div class="col-12 okay">
+                  <label for="menu-toggle">SEARCH</label>
                 </div>
               </div>
-
-              <div class="row justify-content-center">
-                <div class="col-12 pd-10">
-                  <h4>PREFERENCES</h4>
-                </div>
-              </div>
-              <div class="row justify-content-center tag-pd-10">
-                <div class="col-2 tag-pd">
-                  <input type="checkbox" id="f-bath">
-                  <label id="f-bath-bt" for="f-bath">
-                    <i class="fas fa-bath"></i>
-                  </label>
-                </div>
-
-                <div class="col-2 tag-pd">
-                  <input type="checkbox" id="f-smoking">
-                  <label id="f-smoking-bt" for="f-smoking">
-                    <i class="fas fa-smoking"></i>
-                  </label>
-                </div>
-
-                <div class="col-2 tag-pd">
-                  <input type="checkbox" id="f-tv">
-                  <label id="f-tv-bt" for="f-tv">
-                    <i class="fas fa-tv"></i>
-                  </label>
-                </div>
-
-                <div class="col-2 tag-pd">
-                  <input type="checkbox" id="f-utensils">
-                  <label id="f-utensils-bt" for="f-utensils">
-                    <i class="fas fa-utensils"></i>
-                  </label>
-                </div>
-
-                <div class="col-2 tag-pd">
-                  <input type="checkbox" id="f-wifi">
-                  <label id="f-wifi-bt" for="f-wifi">
-                    <i class="fas fa-wifi"></i>
-                  </label>
-                </div>
-
-                <div class="col-2 tag-pd">
-                  <input type="checkbox" id="f-paw">
-                  <label id="f-paw-bt" for="f-paw">
-                    <i class="fas fa-paw"></i>
-                  </label>
-                </div>
-
-
-              </div>
-            </div>
-
-            <div class="row justify-content-center f-bt  pd-10">
-              <div class="col-12 okay">
-                <label for="menu-toggle">SEARCH</label>
-              </div>
-            </div>
           </form>
+          </div>
         </div>
       </div>
 

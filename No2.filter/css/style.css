@@ -55,6 +55,10 @@ img {
   width: 100%;
 }
 
+.mg-center{
+margin: 0 auto;
+}
+
 .pd-0 {
   padding-right: 0px;
   padding-left: 0px;
@@ -338,6 +342,14 @@ img {
 
 .copyright_lines {
   display: none;
+}
+
+/*------------------------------------ min-width: 992px ------------------------------------*/
+
+@media (min-width: 992px) {
+  #content {
+    padding: 2rem 3.5rem .5rem 3.5rem;
+  }
 }
 
 /*------------------------------------ max-width: 575.98px ------------------------------------*/
