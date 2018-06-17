@@ -2,8 +2,6 @@ body {
   height: 100vh;
   font-family: 'Work Sans', sans-serif;
   color: #666;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 input,
@@ -89,10 +87,14 @@ img {
 
 .bd-bg-w {
   background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .bd-bg-o {
   background-color: #b32b00;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #wrap-all {
@@ -136,16 +138,14 @@ img {
 /*------------------ main ------------------*/
 
 #windows {
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-    height: 82vh;
-    box-shadow: 0px 2px 8px 2px rgba(140, 35, 0, .5);
-    background-color: rgb(255, 250, 245);
+  height: 82vh;
+  box-shadow: 0px 2px 8px 2px rgba(140, 35, 0, .5);
+  background-color: rgb(255, 250, 245);
 }
 
 #windows iframe {
   width: 100%;
-     height: 82vh;
+  height: 82vh;
 }
 
 #filter {
@@ -163,10 +163,9 @@ img {
 
 #content {
   margin-right: 0px;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem .5rem 1.5rem;
   float: right;
   width: 100%;
-  height: 100vh;
   background-color: #fff;
   z-index: 1;
 }
@@ -344,6 +343,9 @@ img {
 /*------------------------------------ max-width: 575.98px ------------------------------------*/
 
 @media (max-width: 575.98px) {
+  #wrap {
+    -webkit-overflow-scrolling: touch;
+  }
   #header {
     margin: .8rem 0 .4rem 0;
   }
@@ -376,8 +378,8 @@ img {
     margin-bottom: .4rem;
     font-size: 2rem;
   }
-    #copyright {
-      margin-top: .2rem;
-      line-height: 1rem;
-    }
+  #copyright {
+    margin-top: .2rem;
+    line-height: 1rem;
+  }
 }
