@@ -378,8 +378,14 @@ img {
     margin-bottom: .4rem;
     font-size: 2rem;
   }
-  #copyright {
+  /* #copyright {
     margin-top: .2rem;
     line-height: 1rem;
+  } */
+  .copyright_line {
+    display: none;
+  }
+  .copyright_lines {
+    display: none;
   }
 }
