@@ -255,6 +255,10 @@ input[placeholder],
 /*------------------------------------ max-width: 575.98px ------------------------------------*/
 
 @media (max-width: 575.98px) {
+        #menu h3 {
+            margin: 1.5rem 0 1.5rem 0;
+            padding-bottom: .5rem;
+        }
     #f-bath-bt,
     #f-smoking-bt,
     #f-tv-bt,
@@ -290,7 +294,7 @@ input[placeholder],
         padding-left: 10px;
     }
     .f-gutter {
-        margin-bottom: .5rem;
+        margin-bottom: .2rem;
     }
     .f-select {
         margin-bottom: 1rem;
