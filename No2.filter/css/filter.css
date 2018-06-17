@@ -1,4 +1,3 @@
-
 @keyframes checked-anim {
     50% {
         width: 105%;
@@ -150,7 +149,7 @@ input[placeholder],
 #f-paw-bt {
     cursor: pointer;
     width: 100%;
-    padding: 1rem 0 1rem 0;
+    padding: 1.2rem 0 .8rem 0;
     text-align: center;
     color: #fffaf5;
     border-radius: .2rem;
@@ -195,8 +194,17 @@ input[placeholder],
     -o-transition: .2s;
 }
 
+.f-gutter {
+    margin-bottom: .8rem;
+}
+
 .f-select {
     margin-bottom: 1.2rem;
+}
+
+.tag-pd {
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 /*------------------ ok ------------------*/
@@ -243,3 +251,82 @@ input[placeholder],
     -webkit-transition: .3s;
     -o-transition: .3s;
 } */
+
+/*------------------------------------ max-width: 575.98px ------------------------------------*/
+
+@media (max-width: 575.98px) {
+    #f-bath-bt,
+    #f-smoking-bt,
+    #f-tv-bt,
+    #f-utensils-bt,
+    #f-wifi-bt,
+    #f-paw-bt {
+        padding: 1rem 0 .6rem 0;
+    }
+    #f-bath-bt svg,
+    #f-smoking-bt svg,
+    #f-tv-bt svg,
+    #f-utensils-bt svg,
+    #f-wifi-bt svg,
+    #f-paw-bt svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.5rem;
+    }
+    #f-bath-bt:hover,
+    #f-smoking-bt:hover,
+    #f-tv-bt:hover,
+    #f-utensils-bt:hover,
+    #f-wifi-bt:hover,
+    #f-paw-bt:hover {
+        opacity: 1;
+    }
+    .tag-pd {
+        padding-right: .2rem;
+        padding-left: .2rem;
+    }
+    .tag-pd-10 {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .f-gutter {
+        margin-bottom: .5rem;
+    }
+    .f-select {
+        margin-bottom: 1rem;
+    }
+}
+
+/*------------------------------------ max-width: 320.98px ------------------------------------*/
+
+@media (max-width: 320.98px) {
+    #menu h3 {
+        margin: 1.2rem 0 1.5rem 0;
+        padding-bottom: .5rem;
+        font-size: 1.5rem;
+    }
+    #f-bath-bt,
+    #f-smoking-bt,
+    #f-tv-bt,
+    #f-utensils-bt,
+    #f-wifi-bt,
+    #f-paw-bt {
+        padding: .8rem 0 .4rem 0;
+    }
+    #f-bath-bt svg,
+    #f-smoking-bt svg,
+    #f-tv-bt svg,
+    #f-utensils-bt svg,
+    #f-wifi-bt svg,
+    #f-paw-bt svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1rem;
+    }
+    .f-gutter {
+        margin-bottom: .1rem;
+    }
+    .f-select {
+        margin-bottom: .8rem;
+    }
+}
