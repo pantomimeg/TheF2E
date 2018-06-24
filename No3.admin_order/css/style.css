@@ -380,10 +380,14 @@ h4 {
     border-bottom: .2rem solid rgba(255, 255, 255, .8);
   }
   .menu a:hover,
-  .menu a.active,
-  .user {
+  .menu a.active {
     color: #fcfcfc;
     border-bottom: .2rem solid transparent;
+    background-color: rgba(252, 252, 252, .25);
+  }
+  .user a:hover,
+  .user a.active {
+    color: #fcfcfc;
     background-color: rgba(252, 252, 252, .25);
   }
   .title {
