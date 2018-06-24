@@ -98,10 +98,13 @@ h4 {
 }
 
 .navbar {
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 .5rem;
+  max-width: 960px;
 }
 
 .navbar-brand {
+  margin-right: 1.5rem;
   color: #fcfcfc;
 }
 
@@ -291,10 +294,10 @@ h4 {
   font-size: 4rem;
 }
 
-.website .fa-caret-up,
+/* .website .fa-caret-up,
 .website .fa-caret-down {
   margin-right: .3rem;
-}
+} */
 
 .orders img {
   margin-right: .8rem;
