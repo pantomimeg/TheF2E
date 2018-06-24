@@ -320,71 +320,70 @@
     </div>
 
   </div>
+<!-- chart -->
+<script type="text/javascript">
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('chart'), 'egshop');
 
-
-  <!-- chart -->
-  <script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('chart'), 'egshop');
-
-    // 指定图表的配置项和数据
-    var option = {
-      title: {
-        text: ' '
+  // 指定图表的配置项和数据
+  var option = {
+    title: {
+      text: ' '
+    },
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      data: ['TOTAL REVENUE', 'TOTAL COST', 'NET INCOME']
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['', '1 JAN', '2 FEB', '3 MAR', '4 APR', '5 MAY', '6 JUN']
+    },
+    yAxis: {
+      type: 'value'
+    },
+    series: [{
+        name: 'TOTAL REVENUE',
+        type: 'line',
+        stack: 'total',
+        data: [2200, 1820, 1910, 2340, 2900, 3300, 3100]
       },
-      tooltip: {
-        trigger: 'axis'
+      {
+        name: 'TOTAL COST',
+        type: 'line',
+        stack: 'total',
+        data: [1200, 1320, 1010, 1340, 900, 2300, 2100]
       },
-      legend: {
-        data: ['TOTAL REVENUE', 'TOTAL COST', 'NET INCOME']
+      {
+        name: 'NET INCOME',
+        type: 'line',
+        stack: 'total',
+        data: [1500, 2320, 2010, 1540, 1900, 3300, 4100]
+
       },
-      grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-      },
-      xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: ['', '1 JAN', '2 FEB', '3 MAR', '4 APR', '5 MAY', '6 JUN']
-      },
-      yAxis: {
-        type: 'value'
-      },
-      series: [{
-          name: 'TOTAL REVENUE',
-          type: 'line',
-          stack: 'total',
-          data: [1500, 2320, 2010, 1540, 1900, 3300, 4100]
-        },
-        {
-          name: 'TOTAL COST',
-          type: 'line',
-          stack: 'total',
-          data: [1200, 1320, 1010, 1340, 900, 2300, 2100]
-        },
-        {
-          name: 'NET INCOME',
-          type: 'line',
-          stack: 'total',
-          data: [2200, 1820, 1910, 2340, 2900, 3300, 3100]
-        },
-      ]
-    };
+    ]
+  };
 
 
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
-  </script>
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
 
 
-  <!-- tooltip -->
-  <script>
-    $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-  </script>
+<!-- tooltip -->
+<script>
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
 
 
 </body>
