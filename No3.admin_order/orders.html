@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>EG's TheF2E - No2.filter</title>
+  <title>EG's TheF2E - No3.admin order</title>
   <link rel="shortcut icon" type="image/x-icon" href="egg.ico">
   <link rel="stylesheet" href="css/reset.css">
 
@@ -320,36 +320,36 @@
     </div>
 
   </div>
-<!-- chart -->
-<script type="text/javascript">
-  // 基于准备好的dom，初始化echarts实例
-  var myChart = echarts.init(document.getElementById('chart'), 'egshop');
+  <!-- chart -->
+  <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('chart'), 'egshop');
 
-  // 指定图表的配置项和数据
-  var option = {
-    title: {
-      text: ' '
-    },
-    tooltip: {
-      trigger: 'axis'
-    },
-    legend: {
-      data: ['TOTAL REVENUE', 'TOTAL COST', 'NET INCOME']
-    },
-    grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
-      containLabel: true
-    },
-    xAxis: {
-      type: 'category',
-      boundaryGap: false,
-      data: ['', '1 JAN', '2 FEB', '3 MAR', '4 APR', '5 MAY', '6 JUN']
-    },
-    yAxis: {
-      type: 'value'
-    },
+    // 指定图表的配置项和数据
+    var option = {
+      title: {
+        text: ' '
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+        data: ['TOTAL REVENUE', 'TOTAL COST', 'NET INCOME']
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['', '1 JAN', '2 FEB', '3 MAR', '4 APR', '5 MAY', '6 JUN']
+      },
+      yAxis: {
+        type: 'value'
+      },
       series: [{
           name: 'TOTAL REVENUE',
           type: 'line',
