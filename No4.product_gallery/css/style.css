@@ -1,0 +1,213 @@
+body {
+  height: 100vh;
+  color: #666;
+  background: #f6f3f1;
+}
+
+input,
+button {
+  padding: 0;
+  border: none;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  background-color: transparent;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+a {
+  outline: 0 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pd-0 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.pd-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+#wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*------------------ header ------------------*/
+
+.header {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  height: 100vh;
+  background: url(../img/bg00.jpg) fixed;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/*------------------ main ------------------*/
+
+.content {
+  position: relative;
+  width: 100%;
+}
+
+.content .bg1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/bg01.jpg) fixed;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.content .bg2 {
+  position: relative;
+  margin: 100vh 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/bg02.jpg) fixed;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.content .bg1::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 300px;
+  left: 0;
+  top: 0;
+  border-color: #f6f3f1 transparent;
+  border-width: 200px 0 0 100vw;
+  border-style: solid;
+  z-index: 5;
+}
+
+.content .bg1::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 300px;
+  left: 0;
+  bottom: -300px;
+  border-color: transparent #f6f3f1;
+  border-width: 200px 0 0 100vw;
+  border-style: solid;
+}
+
+.content .bg2::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 300px;
+  left: 0;
+  top: -300px;
+  border-color: transparent #f6f3f1;
+  border-width: 0 0 200px 100vw;
+  border-style: solid;
+  z-index: 5;
+}
+
+.content .bg2::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 300px;
+  left: 0;
+  bottom: 0;
+  border-color: #f6f3f1 transparent;
+  border-width: 0 0 200px 100vw;
+  border-style: solid;
+}
+
+.content .bg1 img,
+.content .bg2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* .slash{
+  margin-top: 50vh;
+} */
+
+/*------------------ content ------------------*/
+
+/*------------------ footer ------------------*/
+
+.footer {
+  z-index: 5;
+}
+
+#copyright {
+  margin: 1.2rem 0;
+  text-align: center;
+  font-size: .8rem;
+  color: rgba(100, 25, 20, 0.5);
+}
+
+#copyright p {
+  margin-bottom: 0rem;
+}
+
+.copyright_lines {
+  display: none;
+}
+
+/*------------------------------------ max-width: 575.98px ------------------------------------*/
+
+@media (max-width: 575.98px) {
+  /*------------------ footer ------------------*/
+  #copyright {
+    margin: .2rem 0 .8rem 0;
+  }
+  .copyright_line {
+    display: none;
+  }
+  .copyright_lines {
+    display: block;
+  }
+}
+
+/*------------------------------------ max-width: 320.98px ------------------------------------*/
+
+@media (max-width: 320.98px) {}
