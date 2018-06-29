@@ -84,12 +84,9 @@ img {
 .content .bg1 {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background: url(../img/bg01.jpg) fixed;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  height: 60vh;
+  background: url(../img/bg01.jpg) fixed center;
+  background-size: auto 100vh;
   overflow: hidden;
 }
 
@@ -97,12 +94,9 @@ img {
   position: relative;
   margin: 100vh 0;
   width: 100%;
-  height: 100vh;
-  background: url(../img/bg02.jpg) fixed;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  height: 60vh;
+  background: url(../img/bg02.jpg) fixed center;
+  background-size: auto 100vh;
   overflow: hidden;
 }
 
@@ -110,11 +104,11 @@ img {
   position: absolute;
   content: '';
   width: 100%;
-  height: 300px;
+  height: 150px;
   left: 0;
   top: 0;
   border-color: #f6f3f1 transparent;
-  border-width: 200px 0 0 100vw;
+  border-width: 150px 0 0 100vw;
   border-style: solid;
   z-index: 5;
 }
@@ -123,11 +117,11 @@ img {
   position: absolute;
   content: '';
   width: 100%;
-  height: 300px;
+  height: 150px;
   left: 0;
-  bottom: -300px;
+  bottom: -150px;
   border-color: transparent #f6f3f1;
-  border-width: 200px 0 0 100vw;
+  border-width: 150px 0 0 100vw;
   border-style: solid;
 }
 
@@ -135,11 +129,11 @@ img {
   position: absolute;
   content: '';
   width: 100%;
-  height: 300px;
+  height: 150px;
   left: 0;
-  top: -300px;
+  top: -150px;
   border-color: transparent #f6f3f1;
-  border-width: 0 0 200px 100vw;
+  border-width: 0 0 150px 100vw;
   border-style: solid;
   z-index: 5;
 }
@@ -148,11 +142,11 @@ img {
   position: absolute;
   content: '';
   width: 100%;
-  height: 300px;
+  height: 150px;
   left: 0;
   bottom: 0;
   border-color: #f6f3f1 transparent;
-  border-width: 0 0 200px 100vw;
+  border-width: 0 0 150px 100vw;
   border-style: solid;
 }
 
@@ -166,9 +160,7 @@ img {
   margin: auto;
 }
 
-/* .slash{
-  margin-top: 50vh;
-} */
+
 
 /*------------------ content ------------------*/
 
