@@ -1,0 +1,18 @@
+#item1 {
+  -skrollr-animation-name: animation1;
+}
+
+@-skrollr-keyframes animation1 {
+  0 {
+    left: 100%;
+  }
+  2000 {
+    left: 0%;
+  }
+  top {
+    color: rgb(0, 0, 0);
+  }
+  bottom {
+    color: rgb(255, 0, 0);
+  }
+}

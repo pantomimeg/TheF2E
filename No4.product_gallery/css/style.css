@@ -30,18 +30,23 @@ img {
   width: 100%;
 }
 
-.pd-0 {
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-.pd-10 {
-  padding-right: 10px;
-  padding-left: 10px;
+h2 {
+  margin-bottom: .5rem;
+  font-size: 4rem;
+  font-family: 'Walter Turncoat', cursive;
+  color: #5e2920;
 }
 
 .w-100 {
   width: 100%;
+}
+
+.f-l {
+  float: left;
+}
+
+.f-r {
+  float: right;
 }
 
 #wrap {
@@ -81,88 +86,191 @@ img {
   width: 100%;
 }
 
-.content .bg1 {
+.bg1 {
   position: relative;
+  margin: 2vh 0;
   width: 100%;
-  height: 60vh;
-  background: url(../img/bg01.jpg) fixed center;
-  background-size: auto 100vh;
+  height: 40vh;
+  background: url(../img/bg01.jpg) fixed center no-repeat;
+  background-size: 150%;
   overflow: hidden;
 }
 
-.content .bg2 {
+.bg2 {
   position: relative;
-  margin: 100vh 0;
+  margin: 2vh 0;
   width: 100%;
-  height: 60vh;
-  background: url(../img/bg02.jpg) fixed center;
-  background-size: auto 100vh;
+  height: 40vh;
+  background: url(../img/bg02.jpg) fixed center no-repeat;
+  background-size: 150%;
   overflow: hidden;
 }
 
-.content .bg1::before {
+.bg3 {
+  position: relative;
+  margin-top: 2vh;
+  width: 100%;
+  height: 110vh;
+  background: url(../img/bg03.jpg) fixed center bottom no-repeat;
+  background-size: 120%;
+  overflow: hidden;
+}
+
+.bg1::before,
+.bg3::before {
   position: absolute;
   content: '';
   width: 100%;
-  height: 150px;
+  height: 5rem;
   left: 0;
   top: 0;
   border-color: #f6f3f1 transparent;
-  border-width: 150px 0 0 100vw;
+  border-width: 5rem 0 0 100vw;
   border-style: solid;
   z-index: 5;
 }
 
-.content .bg1::after {
+.bg1::after {
   position: absolute;
   content: '';
   width: 100%;
-  height: 150px;
+  height: 5rem;
   left: 0;
-  bottom: -150px;
+  bottom: -5rem;
   border-color: transparent #f6f3f1;
-  border-width: 150px 0 0 100vw;
+  border-width: 5rem 0 0 100vw;
   border-style: solid;
 }
 
-.content .bg2::before {
+.bg2::before {
   position: absolute;
   content: '';
   width: 100%;
-  height: 150px;
+  height: 5rem;
   left: 0;
-  top: -150px;
+  top: -5rem;
   border-color: transparent #f6f3f1;
-  border-width: 0 0 150px 100vw;
+  border-width: 0 0 5rem 100vw;
   border-style: solid;
   z-index: 5;
 }
 
-.content .bg2::after {
+.bg2::after {
   position: absolute;
   content: '';
   width: 100%;
-  height: 150px;
+  height: 5rem;
   left: 0;
   bottom: 0;
   border-color: #f6f3f1 transparent;
-  border-width: 0 0 150px 100vw;
+  border-width: 0 0 5rem 100vw;
   border-style: solid;
 }
 
-.content .bg1 img,
-.content .bg2 img {
+/* .bg3::before {
   position: absolute;
-  top: 0;
+  content: '';
+  width: 100%;
+  height: 3rem;
   left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-
+  top: 0;
+  border-color: #f6f3f1 transparent;
+  border-width: 3rem 0 0 100vw;
+  border-style: solid;
+  z-index: 5;
+} */
 
 /*------------------ content ------------------*/
+
+.item1,
+.item2 {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 960px;
+  padding: 0 1rem;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item1 {
+  flex-direction: row;
+}
+
+.item2 {
+  flex-direction: row-reverse;
+}
+
+.item-img {
+  position: relative;
+  width: 55%;
+}
+
+.item-img img {
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+
+.item-info {
+  width: 45%;
+  padding: 0 1rem 0 2rem;
+  z-index: 6;
+}
+
+.item-info p {
+  font-size: 1.2rem;
+  font-family: 'Walter Turncoat', cursive;
+  line-height: 2rem;
+}
+
+.frame,
+.box {
+  position: absolute;
+  z-index: 1;
+}
+
+.item1 .frame {
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 65%;
+  height: 50%;
+  border: .2rem solid #ffbb00;
+}
+
+.item1 .box {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 65%;
+  height: 70%;
+  background: #ffbb00;
+}
+
+.item2 .frame {
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 65%;
+  height: 50%;
+  border: .2rem solid #ffbb00;
+}
+
+.item2 .box {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 65%;
+  height: 70%;
+  background: #ffbb00;
+}
+
+.bg3 h3 {
+  margin: 72vh auto 28vh auto;
+  width: 90%;
+  font-size: 3rem;
+  font-family: 'Walter Turncoat', cursive;
+  text-align: center;
+  color: #fff;
+}
 
 /*------------------ footer ------------------*/
 
@@ -171,7 +279,7 @@ img {
 }
 
 #copyright {
-  margin: 1.2rem 0;
+  margin: 1rem 0;
   text-align: center;
   font-size: .8rem;
   color: rgba(100, 25, 20, 0.5);
@@ -179,10 +287,42 @@ img {
 
 #copyright p {
   margin-bottom: 0rem;
+  font-family: 'verdana';
 }
 
 .copyright_lines {
   display: none;
+}
+
+/*------------------------------------ max-width: 768px ------------------------------------*/
+
+@media (max-width: 768px) {
+  .bg1,
+  .bg2,
+  .bg3 {
+    height: auto;
+    padding-bottom: 66.7%;
+    background-size: cover;
+    overflow: auto;
+  }
+  .bg1::before,
+  .bg1::after,
+  .bg2::before,
+  .bg2::after,
+  .bg3::before {
+    content: none;
+    border-color: transparent;
+    border-width: none;
+  }
+  .item-img,
+  .item-info {
+    width: 100%;
+  }
+  .item1,
+  .item2 {
+    margin: 2rem auto;
+    flex-wrap: wrap;
+  }
 }
 
 /*------------------------------------ max-width: 575.98px ------------------------------------*/
@@ -190,7 +330,7 @@ img {
 @media (max-width: 575.98px) {
   /*------------------ footer ------------------*/
   #copyright {
-    margin: .2rem 0 .8rem 0;
+    margin: .8rem 0;
   }
   .copyright_line {
     display: none;
