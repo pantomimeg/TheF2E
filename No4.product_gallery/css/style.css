@@ -244,7 +244,7 @@ h2 {
   width: 18%;
   height: 48%;
   background-image: linear-gradient(45deg, var(--white) 0px, var(--white) 15px, transparent 15px, transparent 30px, var(--white) 30px, var(--white) 45px, transparent 45px, transparent 60px);
-  background-size: 43px 43px;
+  background-size: 42.5px 42.5px;
 }
 
 .content a {
@@ -334,7 +334,7 @@ h2 {
   .bg3 {
     height: auto;
     padding-bottom: 66.7%;
-    background-size: cover;
+    background-size: 100%;
     overflow: auto;
   }
   .bg1::before,
