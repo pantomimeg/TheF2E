@@ -1,7 +1,15 @@
+:root {
+  --white: #f6f3f1;
+  --yellow: #ffbb00;
+  --brown: #5e2920;
+  --brown2: rgba(100, 25, 20, 0.5);
+  --font1: 'Walter Turncoat', cursive;
+  --font2: 'verdana';
+}
+
 body {
   height: 100vh;
-  color: #666;
-  background: #f6f3f1;
+  background: var(--white);
 }
 
 input,
@@ -33,20 +41,8 @@ img {
 h2 {
   margin-bottom: .5rem;
   font-size: 4rem;
-  font-family: 'Walter Turncoat', cursive;
-  color: #5e2920;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-.f-l {
-  float: left;
-}
-
-.f-r {
-  float: right;
+  font-family: var(--font1);
+  color: var(--brown);
 }
 
 #wrap {
@@ -124,7 +120,7 @@ h2 {
   height: 5rem;
   left: 0;
   top: 0;
-  border-color: #f6f3f1 transparent;
+  border-color: var(--white) transparent;
   border-width: 5rem 0 0 100vw;
   border-style: solid;
   z-index: 5;
@@ -137,7 +133,7 @@ h2 {
   height: 5rem;
   left: 0;
   bottom: -5rem;
-  border-color: transparent #f6f3f1;
+  border-color: transparent var(--white);
   border-width: 5rem 0 0 100vw;
   border-style: solid;
 }
@@ -149,7 +145,7 @@ h2 {
   height: 5rem;
   left: 0;
   top: -5rem;
-  border-color: transparent #f6f3f1;
+  border-color: transparent var(--white);
   border-width: 0 0 5rem 100vw;
   border-style: solid;
   z-index: 5;
@@ -162,23 +158,10 @@ h2 {
   height: 5rem;
   left: 0;
   bottom: 0;
-  border-color: #f6f3f1 transparent;
+  border-color: var(--white) transparent;
   border-width: 0 0 5rem 100vw;
   border-style: solid;
 }
-
-/* .bg3::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 3rem;
-  left: 0;
-  top: 0;
-  border-color: #f6f3f1 transparent;
-  border-width: 3rem 0 0 100vw;
-  border-style: solid;
-  z-index: 5;
-} */
 
 /*------------------ content ------------------*/
 
@@ -220,56 +203,77 @@ h2 {
 }
 
 .item-info p {
+  margin-top: .5rem;
   font-size: 1.2rem;
-  font-family: 'Walter Turncoat', cursive;
+  font-family: var(--font1);
+  letter-spacing: .05rem;
   line-height: 2rem;
+  color: var(--brown2);
 }
 
 .frame,
-.box {
+.box,
+.striped {
   position: absolute;
   z-index: 1;
 }
 
-.item1 .frame {
+.frame {
   top: 1.5rem;
   left: 1.5rem;
   width: 65%;
   height: 50%;
-  border: .2rem solid #ffbb00;
+  border: .2rem solid var(--yellow);
 }
 
-.item1 .box {
+.box {
   bottom: 1.5rem;
   right: 1.5rem;
   width: 65%;
   height: 70%;
-  background: #ffbb00;
+  background: var(--yellow);
 }
 
-.item2 .frame {
-  top: 1.5rem;
-  left: 1.5rem;
-  width: 65%;
-  height: 50%;
-  border: .2rem solid #ffbb00;
+.striped {
+  bottom: 0;
+  right: 0;
+  width: 18%;
+  height: 48%;
+  background-image: linear-gradient(45deg, var(--white) 0px, var(--white) 15px, transparent 15px, transparent 30px, var(--white) 30px, var(--white) 45px, transparent 45px, transparent 60px);
+  background-size: 43px 43px;
 }
 
-.item2 .box {
-  bottom: 1.5rem;
-  right: 1.5rem;
-  width: 65%;
-  height: 70%;
-  background: #ffbb00;
+.content a {
+  float: right;
+  display: inline-block;
+  margin: 2rem 1rem 0 0;
+  padding: .2rem .9rem .5rem 1rem;
+  text-decoration: none;
+  font-family: var(--font1);
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  color: var(--yellow);
+  border-bottom: 2px solid var(--yellow);
+  border-right: 2px solid var(--yellow);
+}
+
+.content a:hover {
+  opacity: .6;
+  -ms-transform: translate(.15rem, .15rem);
+  -webkit-transform: translate(.15rem, .15rem);
+  -o-transform: translate(.15rem, .15rem);
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
 }
 
 .bg3 h3 {
   margin: 72vh auto 28vh auto;
   width: 90%;
   font-size: 3rem;
-  font-family: 'Walter Turncoat', cursive;
+  font-family: var(--font1);
   text-align: center;
-  color: #fff;
+  color: var(--white);
 }
 
 /*------------------ footer ------------------*/
@@ -282,12 +286,12 @@ h2 {
   margin: 1rem 0;
   text-align: center;
   font-size: .8rem;
-  color: rgba(100, 25, 20, 0.5);
+  color: var(--brown2);
 }
 
 #copyright p {
   margin-bottom: 0rem;
-  font-family: 'verdana';
+  font-family: var(--font2);
 }
 
 .copyright_lines {
@@ -314,14 +318,18 @@ h2 {
     border-color: transparent;
     border-width: none;
   }
+  .item1,
+  .item2 {
+    margin: 2.5rem auto;
+    flex-wrap: wrap;
+  }
   .item-img,
   .item-info {
     width: 100%;
   }
-  .item1,
-  .item2 {
-    margin: 2rem auto;
-    flex-wrap: wrap;
+  .item-info {
+    margin-top: 1rem;
+    padding: 0 1rem;
   }
 }
 
