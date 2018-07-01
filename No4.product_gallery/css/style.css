@@ -329,13 +329,19 @@ h2 {
 /*------------------------------------ max-width: 768px ------------------------------------*/
 
 @media (max-width: 768px) {
-  .bg1,
-  .bg2,
-  .bg3 {
-    height: auto;
+  .bg1 {
+    background: url(../img/bg01.jpg) center no-repeat;
     padding-bottom: 66.7%;
-    background-size: 100%;
-    overflow: auto;
+    overflow: hidden;
+  }
+  .bg2 {
+    background: url(../img/bg02.jpg) center no-repeat;
+    padding-bottom: 66.7%;
+    overflow: hidden;
+  }
+  .bg3 {
+    background: url(../img/bg03.jpg) center bottom no-repeat;
+    overflow: hidden;
   }
   .bg1::before,
   .bg1::after,
