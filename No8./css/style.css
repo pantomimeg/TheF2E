@@ -1,0 +1,91 @@
+body {
+  height: 100vh;
+  color: #666;
+}
+
+input,
+button {
+  padding: 0;
+  border: none;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  background-color: transparent;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+a {
+  outline: 0 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pd-0 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.pd-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+
+/*------------------ header ------------------*/
+
+/*------------------ main ------------------*/
+
+/*------------------ content ------------------*/
+
+/*------------------ footer ------------------*/
+
+#copyright {
+  margin-top: .8rem;
+  text-align: center;
+  font-size: .8rem;
+  color: rgba(255, 230, 210, .5);
+}
+
+#copyright p {
+  margin-bottom: 0rem;
+}
+
+.copyright_lines {
+  display: none;
+}
+
+/*------------------------------------ max-width: 575.98px ------------------------------------*/
+
+@media (max-width: 575.98px) {
+
+  /*------------------ footer ------------------*/
+  #copyright {
+    margin-top: .2rem;
+  }
+  .copyright_line {
+    display: none;
+  }
+  .copyright_lines {
+    display: block;
+  }
+}
+
+/*------------------------------------ max-width: 320.98px ------------------------------------*/
+
+@media (max-width: 320.98px) {
+
+}
