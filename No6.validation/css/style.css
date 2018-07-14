@@ -10,7 +10,6 @@
 }
 
 body {
-  height: 100vh;
   color: var(--white);
   font-family: var(--font2);
   background-image: url(../img/bg01.jpg);
