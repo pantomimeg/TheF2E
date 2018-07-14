@@ -36,6 +36,12 @@ a {
   outline: 0 !important;
 }
 
+input[placeholder],
+[placeholder],
+[placeholder]:focus {
+  color: var(--yellow);
+}
+
 button {
   cursor: pointer;
 }
@@ -188,6 +194,18 @@ h2 {
   margin: .6rem 0;
 }
 
+label {
+  margin-bottom: .2rem;
+}
+
+.form-control {
+  color: var(--white);
+  background-color: transparent;
+  border:none;
+  border-radius: 0;
+  border-bottom: 2px solid var(--white);
+}
+
 .info-bt {
   margin: 1.5rem 0 .5rem 0;
   padding: 0.4rem 0;
@@ -198,10 +216,6 @@ h2 {
 .info-bt:hover {
   color: var(--blue);
   background-color: var(--white);
-}
-
-label {
-  margin-bottom: .2rem;
 }
 
 /*------------------ footer ------------------*/
