@@ -1,0 +1,264 @@
+:root {
+  --white: #fff;
+  --white2: rgba(255, 255, 255, .6);
+  --yellow: #ffc921;
+  --blue: rgb(0, 55, 125);
+  --blue2: rgba(0, 55, 125, .8);
+  --noColer: transparent;
+  --font1: 'Knewave', cursive;
+  --font2: 'Varela Round', sans-serif;
+}
+
+body {
+  height: 100vh;
+  color: var(--white);
+  font-family: var(--font2);
+  background-image: url(../img/bg01.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+input,
+button {
+  padding: 0;
+  border: none;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  background-color: transparent;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+a {
+  outline: 0 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: var(--font1);
+  text-shadow: 3px 4px 1px var(--blue2);
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-family: var(--font2);
+  text-shadow: 3px 4px 1px var(--blue2);
+}
+
+.pd-0 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.pd-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+#wrap {
+  margin: 2rem auto 0 auto;
+  padding: 2.5rem 1.5rem;
+  font-family: var(--font2);
+  border-radius: .5rem;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#wrap::after {
+  margin: -30px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  z-index: -1;
+  background-image: url(../img/bg01.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -ms-filter: blur(15px);
+  -o-filter: blur(15px);
+  filter: blur(15px);
+}
+
+/*------------------ header ------------------*/
+
+.header {
+  margin: 0 auto;
+  padding: .5rem 0 1.2rem 0;
+  text-align: center;
+}
+
+.bread {
+  display: inline-block;
+}
+
+.bread li {
+  float: left;
+  display: inline-block;
+  /* box-shadow: 0 3px 4px 1px var(--blue2); */
+}
+
+.bread::after {
+  clear: both;
+}
+
+.done {
+  width: 1rem;
+  height: 1rem;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+.yet {
+  width: 1rem;
+  height: 1rem;
+  background: var(--noColer);
+  border: 2.5px solid var(--white);
+  border-radius: 50%;
+}
+
+.bread span {
+  float: left;
+  width: 4rem;
+  height: .15rem;
+  margin: .45rem -2px 0 -2px;
+  background: var(--white);
+}
+
+/*------------------ main ------------------*/
+
+/* .container {
+  margin: .8rem auto;
+  padding: 1.5rem;
+  font-family: var(--font2);
+  border-radius: .5rem;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container::after {
+  margin: -30px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  z-index: -1;
+  background-image: url(../img/bg01.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -ms-filter: blur(15px);
+  -o-filter: blur(15px);
+  filter: blur(15px);
+} */
+
+/*------------------ content ------------------*/
+
+.info-item {
+  margin: .6rem 0;
+}
+
+.info-bt {
+  margin: 1.5rem 0 .5rem 0;
+  padding: 0.4rem 0;
+  color: var(--white);
+  background-color: var(--yellow);
+}
+
+.info-bt:hover {
+  color: var(--blue);
+  background-color: var(--white);
+}
+
+label {
+  margin-bottom: .2rem;
+}
+
+/*------------------ footer ------------------*/
+
+#copyright {
+  margin: .8rem 0;
+  text-align: center;
+  font-size: .8rem;
+}
+
+#copyright p {
+  margin-bottom: 0rem;
+  text-shadow: 3px 4px 1px var(--blue2);
+}
+
+.copyright_lines {
+  display: none;
+}
+
+/*------------------------------------ max-width: 575.98px ------------------------------------*/
+
+@media (max-width: 575.98px) {
+  #wrap {
+    margin: 1rem auto 0 auto;
+  }
+  /*------------------ footer ------------------*/
+  #copyright {
+    margin: .5rem 0;
+  }
+  .copyright_line {
+    display: none;
+  }
+  .copyright_lines {
+    display: block;
+  }
+}
+
+/*------------------------------------ max-width: 320.98px ------------------------------------*/
+
+@media (max-width: 320.98px) {
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  #wrap {
+    padding: 1.5rem 1rem;
+  }
+  .header {
+    padding: .5rem 0;
+  }
+  .header,
+  .container {
+    max-width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}

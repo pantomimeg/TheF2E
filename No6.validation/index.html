@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EG's TheF2E - No6.validation</title>
+  <link rel="shortcut icon" type="image/x-icon" href="egg.ico">
+  <link rel="stylesheet" href="css/reset.css">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Knewave|Varela+Round" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <div id="wrap" class="col-11 col-md-6">
+
+    <header class="header col-11">
+      <ul class="bread">
+        <li class="done"></li>
+        <span></span>
+        <li class="yet"></li>
+        <span></span>
+        <li class="yet"></li>
+        <span></span>
+        <li class="yet"></li>
+      </ul>
+      <h1>Create Account</h1>
+      <h2>Glad to see you here!</h2>
+    </header>
+
+    <main class="container col-11">
+      <form class="needs-validation justify-content-center" novacontainerlidate>
+        <div class="form-row justify-content-center">
+          <div class="col-11 info-item">
+            <label for="validationCustom01">Account</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="example@email.com" value="Mark" required>
+            <!-- <div class="valid-feedback">
+              Good!
+            </div> -->
+            <div class="invalid-feedback">
+              INVALID EMAIL
+            </div>
+          </div>
+          <div class="col-11 info-item">
+            <label for="validationCustom02">Password</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="●●●●●●●●" required>
+            <!-- <div class="valid-feedback">
+              Good!
+            </div> -->
+            <div class="invalid-feedback">
+              MINIMUM 8 CHARACTERS
+            </div>
+          </div>
+          <div class="col-11 info-item">
+            <label for="validationCustom03">Comfirm Password</label>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="●●●●●●●●" required>
+            <!-- <div class="valid-feedback">
+              Good!
+            </div> -->
+            <div class="invalid-feedback">
+              NOT MATCH
+            </div>
+          </div>
+
+          <button class="col-8 btn info-bt" type="submit">SUBMIT & NEXT</button>
+          <!-- <input class="btn btn-primary info-item" type="submit" value="next" onclick="location.href='#'"> -->
+      </form>
+
+
+
+
+    </main>
+
+
+
+    </div>
+
+    <footer class="footer">
+      <div id="copyright">
+        <div class="copyright_line">
+          <p>[The F2E - No6.validation] Designed by Pantomimeg.</p>
+        </div>
+        <div class="copyright_lines">
+          <p>[The F2E - No6.validation]</p>
+          <p>Designed by Pantomimeg.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+
+</body>
+
+</html>
