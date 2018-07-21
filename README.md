@@ -18,3 +18,5 @@
 **No5.Comic Viewer** [link](https://pantomimeg.github.io/TheF2E/No5.Comic_Viewer/)
 
 **No6.validation** [link](https://pantomimeg.github.io/TheF2E/No6.validation/)
+
+**No7.Canvas Game** [link](https://pantomimeg.github.io/TheF2E/No7.Canvas_Game/)
