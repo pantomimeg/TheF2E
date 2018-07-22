@@ -107,7 +107,7 @@ function draw() {
   ctx.closePath()
   ctx.fillStyle = "#fff"
   ctx.fill()
-  ctx.font = "700 70px '蘋方'"
+  ctx.font = "700 70px '微軟正黑體'"
   ctx.fillText("R", 340, 240)
 
   ctx.font = "100 16px '微軟正黑體'"
