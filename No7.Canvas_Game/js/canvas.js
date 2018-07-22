@@ -77,38 +77,38 @@ function draw() {
 
   // batterybody
   ctx.beginPath()
-  ctx.fillRect(318, 205, 16, 30)
-  ctx.fillRect(318, 237, 16, 2.5)
+  ctx.fillRect(322, 205, 16, 30)
+  ctx.fillRect(322, 237, 16, 2.5)
   ctx.fillStyle = "#F5AF5F"
   ctx.fill();
 
   ctx.beginPath();
   ctx.fillStyle = "#fff"
-  ctx.fillRect(322, 203, 8, 2)
+  ctx.fillRect(326, 203, 8, 2)
   ctx.fill();
 
   // batterybody N
   ctx.beginPath()
-  ctx.moveTo(325, 212)
-  ctx.lineTo(322, 222)
-  ctx.lineTo(327, 222)
-  ctx.lineTo(327, 230)
-  ctx.lineTo(330, 219)
-  ctx.lineTo(325, 219)
+  ctx.moveTo(329, 212)
+  ctx.lineTo(326, 222)
+  ctx.lineTo(331, 222)
+  ctx.lineTo(331, 230)
+  ctx.lineTo(334, 219)
+  ctx.lineTo(329, 219)
   ctx.closePath()
   ctx.fillStyle = "#fff"
   ctx.fill()
 
   //center txt
   ctx.beginPath()
-  ctx.moveTo(365, 220)
-  ctx.lineTo(373, 224)
-  ctx.lineTo(363, 228)
+  ctx.moveTo(368, 220)
+  ctx.lineTo(376, 224)
+  ctx.lineTo(366, 228)
   ctx.closePath()
   ctx.fillStyle = "#fff"
   ctx.fill()
   ctx.font = "500 70px 'Yantramanav'"
-  ctx.fillText("R", 340, 240)
+  ctx.fillText("R", 343, 240)
 
   ctx.font = "100 16px '微軟正黑體'"
   ctx.fillText("Radio Defense", 298, 262)
