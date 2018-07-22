@@ -107,10 +107,10 @@ function draw() {
   ctx.closePath()
   ctx.fillStyle = "#fff"
   ctx.fill()
-  ctx.font = "700 70px '微軟正黑體'"
+  ctx.font = "700 70px 'San Francisco'"
   ctx.fillText("R", 340, 240)
 
-  ctx.font = "100 16px 'vadara'"
+  ctx.font = "100 16px '微軟正黑體'"
   ctx.fillText("Radio Defense", 298, 262)
 
   // ctx.beginPath()
@@ -119,7 +119,7 @@ function draw() {
   // ctx.stroke()
 
 
-  ctx.font = "100 13px 'vadara'"
+  ctx.font = "100 13px '微軟正黑體'"
   ctx.fillStyle = "rgba(255,255,255,.3)"
   ctx.fillText("[The F2E - No7.Canvas Game] Designed by Pantomimeg. ", 183, 485)
 }
