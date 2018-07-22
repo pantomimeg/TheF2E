@@ -107,7 +107,7 @@ function draw() {
   ctx.closePath()
   ctx.fillStyle = "#fff"
   ctx.fill()
-  ctx.font = "700 70px 'San Francisco'"
+  ctx.font = "700 70px '蘋方'"
   ctx.fillText("R", 340, 240)
 
   ctx.font = "100 16px '微軟正黑體'"
@@ -121,7 +121,7 @@ function draw() {
 
   ctx.font = "100 13px '微軟正黑體'"
   ctx.fillStyle = "rgba(255,255,255,.3)"
-  ctx.fillText("[The F2E - No7.Canvas Game] Designed by Pantomimeg. ", 183, 485)
+  ctx.fillText("[The F2E - No7.Canvas Game] Designed by Pantomimeg.", 183, 485)
 }
 setInterval(draw, 10)
 // draw()
