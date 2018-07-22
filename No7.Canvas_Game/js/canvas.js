@@ -101,13 +101,13 @@ function draw() {
 
   //center txt
   ctx.beginPath()
-  ctx.moveTo(370, 220)
-  ctx.lineTo(378, 224)
-  ctx.lineTo(368, 227)
+  ctx.moveTo(365, 220)
+  ctx.lineTo(373, 224)
+  ctx.lineTo(363, 228)
   ctx.closePath()
   ctx.fillStyle = "#fff"
   ctx.fill()
-  ctx.font = "700 70px '微軟正黑體'"
+  ctx.font = "500 70px 'Yantramanav'"
   ctx.fillText("R", 340, 240)
 
   ctx.font = "100 16px '微軟正黑體'"
