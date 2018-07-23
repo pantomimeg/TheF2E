@@ -1,0 +1,291 @@
+:root {
+  --white: #fff;
+  --yellow: #ffbb00;
+  --orange: #ff7300;
+  --lake: #00bbcc;
+  --brown: #5e2920;
+  /* --white: #fff;
+  --yellow: #1469FF;
+  --orange: #0027C8;
+  --lake: #FF3C82;
+  --brown: #000; */
+  --black: #000;
+  --noColer: transparent;
+  --font1: 'Rubik', sans-serif;
+  --font2: 'Abel', sans-serif;
+}
+
+/*------------------ ani ------------------*/
+
+@keyframes bg1 {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes square1 {
+  0%,
+  10% {
+    top: 150%;
+    left: 20%;
+    transform: rotate(0deg);
+    display: none;
+  }
+  30% {
+    top: 15%;
+    left: 20%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 15%;
+    left: 20%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes triangle1 {
+  0%,
+  10% {
+    top: 180%;
+    left: 80%;
+    transform: rotate(0deg);
+    display: none;
+  }
+  30% {
+    top: 35%;
+    left: 80%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 35%;
+    left: 80%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circle1 {
+  0%,
+  10% {
+    bottom: -100%;
+    right: -15%;
+    display: none;
+  }
+  40%,
+  100% {
+    bottom: -10%;
+    right: -15%;
+  }
+  60% {
+    bottom: -10%;
+    right: -20%;
+    transform: translate(5%, 5%);
+  }
+}
+
+/*------------------ main ------------------*/
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+}
+
+input,
+button {
+  padding: 0;
+  border: none;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  background-color: transparent;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+a {
+  outline: 0 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.white {
+  color: var(--white);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.lake {
+  color: var(--lake);
+}
+
+.brown {
+  color: var(--brown);
+}
+
+/*------------------ main ------------------*/
+
+#wrap {
+  width: 100%;
+  max-width: 960px;
+}
+
+#main,
+.q-all {
+  display: flex;
+  align-items: center;
+}
+
+#main {
+  background-color: var(--orange);
+}
+
+.q-all {
+  float: left;
+  height: 100vh;
+  justify-content: center;
+  background-color: var(--yellow);
+  z-index: 5;
+  animation: bg1 .5s ease both;
+}
+
+.q-all h2 {
+  font-size: 3rem;
+  font-family: var(--font1);
+}
+
+.q-info {
+  width: 60%;
+}
+
+.q-main {
+  font-size: 1.8rem;
+  font-family: var(--font1);
+  font-weight: 500;
+}
+
+.q-px {
+  font-size: 3rem;
+  font-family: var(--font2);
+}
+
+.q-op {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.q-op a {
+  display: block;
+  padding: .5rem;
+  margin: 1rem 0;
+  text-decoration: none;
+  text-align: center;
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 50px;
+  transition: .3s;
+}
+
+.q-op a:hover {
+  color: var(--yellow);
+  background-color: var(--white);
+  transition: .3s;
+}
+
+/*------------------ shape ------------------*/
+
+.shape {
+  float: right;
+  position: relative;
+  height: 100vh;
+  width: 40%;
+  background-color: var(--orange);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.square {
+  position: absolute;
+  float: left;
+  width: 120px;
+  height: 120px;
+  background-color: var(--lake);
+  animation: square1 5s ease both;
+}
+
+.triangle {
+  position: absolute;
+  float: left;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 86.6px 50px;
+  border-color: transparent transparent var(--white) transparent;
+  animation: triangle1 5.5s ease both;
+}
+
+.circle {
+  position: absolute;
+  float: left;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: var(--brown);
+  animation: circle1 5s ease both;
+}
+
+/*------------------ footer ------------------*/
+
+#copyright {
+  margin-top: .8rem;
+  text-align: center;
+  font-size: .8rem;
+  color: rgba(255, 230, 210, .5);
+}
+
+#copyright p {
+  margin-bottom: 0rem;
+}
+
+.copyright_lines {
+  display: none;
+}
+
+/*------------------------------------ max-width: 575.98px ------------------------------------*/
+
+@media (max-width: 575.98px) {
+  /*------------------ footer ------------------*/
+  #copyright {
+    margin-top: .2rem;
+  }
+  .copyright_line {
+    display: none;
+  }
+  .copyright_lines {
+    display: block;
+  }
+}
+
+/*------------------------------------ max-width: 320.98px ------------------------------------*/
+
+@media (max-width: 320.98px) {}
