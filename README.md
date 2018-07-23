@@ -21,7 +21,7 @@
 
 **No7.Canvas Game** [link](https://pantomimeg.github.io/TheF2E/No7.canvas_game/)
 
-**No7.Parallax Scrolling** [link](https://pantomimeg.github.io/TheF2E/No8.parallax_scrolling/)
+**No8.Parallax Scrolling** [link](https://pantomimeg.github.io/TheF2E/No8.parallax_scrolling/)
 
 
 
