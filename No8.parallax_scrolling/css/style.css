@@ -4,13 +4,7 @@
   --orange: #ff7300;
   --lake: #00bbcc;
   --brown: #5e2920;
-  /* --white: #fff;
-  --yellow: #1469FF;
-  --orange: #0027C8;
-  --lake: #FF3C82;
-  --brown: #000; */
   --black: #000;
-  --noColer: transparent;
   --font1: 'Rubik', sans-serif;
   --font2: 'Abel', sans-serif;
 }
@@ -285,7 +279,3 @@ img {
     display: block;
   }
 }
-
-/*------------------------------------ max-width: 320.98px ------------------------------------*/
-
-@media (max-width: 320.98px) {}
