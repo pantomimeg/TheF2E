@@ -7,16 +7,21 @@
 **EG's works**
  ---
 
-**No1.todolist** [link](https://pantomimeg.github.io/TheF2E/No1.todolist/index.html)
+**No1.Todolist** [link](https://pantomimeg.github.io/TheF2E/No1.todolist/index.html)
 
-**No2.filter** [link](https://pantomimeg.github.io/TheF2E/No2.filter/index.html)
+**No2.Filter** [link](https://pantomimeg.github.io/TheF2E/No2.filter/index.html)
 
-**No3.admin order** [link](https://pantomimeg.github.io/TheF2E/No3.admin_order/index.html)
+**No3.Admin Order** [link](https://pantomimeg.github.io/TheF2E/No3.admin_order/index.html)
 
-**No4.product gallery** [link](https://pantomimeg.github.io/TheF2E/No4.product_gallery/)
+**No4.Product Gallery** [link](https://pantomimeg.github.io/TheF2E/No4.product_gallery/)
 
-**No5.Comic Viewer** [link](https://pantomimeg.github.io/TheF2E/No5.Comic_Viewer/)
+**No5.Comic Viewer** [link](https://pantomimeg.github.io/TheF2E/No5.comic_viewer/)
 
-**No6.validation** [link](https://pantomimeg.github.io/TheF2E/No6.validation/)
+**No6.Validation** [link](https://pantomimeg.github.io/TheF2E/No6.validation/)
 
-**No7.Canvas Game** [link](https://pantomimeg.github.io/TheF2E/No7.Canvas_Game/)
+**No7.Canvas Game** [link](https://pantomimeg.github.io/TheF2E/No7.canvas_game/)
+
+**No7.Parallax Scrolling** [link](https://pantomimeg.github.io/TheF2E/No8.parallax_scrolling/)
+
+
+
