@@ -41,6 +41,7 @@ img {
 
 h1 {
   margin-bottom: -1rem;
+  font-size: 2.5rem;
   font-family: var(--font1);
   color: var(--yellow);
   /* border: 1px solid #f00; */
@@ -48,6 +49,7 @@ h1 {
 
 h2 {
   margin-bottom: 1rem;
+  font-size: 2rem;
   font-family: var(--font2);
   text-align: center;
   font-size: 600;
@@ -100,7 +102,7 @@ h4 {
 
 .b-info {
   width: 50%;
-  padding: .5rem 0 1rem 2rem;
+  padding: .5rem 0 1rem 3%;
 }
 
 .b-info p {
@@ -114,21 +116,23 @@ h4 {
 }
 
 .b-list {
-  width: 72%;
+  width: 75%;
   margin-top: 2rem;
 }
 
 .b-list h3 {
-  display: inline;
-  padding: .2rem 3.5rem .2rem 2rem;
+  display: inline-block;
+  float: left;
+  padding: .5rem 3.5rem .5rem 2rem;
   font-size: 1.2rem;
   color: var(--yellow);
   background: linear-gradient(-105deg, transparent 2rem, var(--blue) 0)top right;
 }
 
 .b-list ul {
+  float: left;
   display: block;
-  margin-top: 5px;
+  width: 100%;
   margin-bottom: 0;
   border: .2rem solid var(--blue);
 }
@@ -192,11 +196,9 @@ h4 {
   .b-list {
     margin-top: 0;
   }
-
   .b-list ul {
     margin-top: 4px;
   }
-
   .b-list a {
     padding: .5rem .5rem;
   }
