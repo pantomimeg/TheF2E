@@ -1,0 +1,395 @@
+:root {
+  --pink: #FF0093;
+  --d-pink: #D10079;
+  --purple: #8000FF;
+  --d-purple1: #6900D1;
+  --d-purple2: #35006A;
+  --d-blue: #250060;
+  --white: #fff;
+  --font1: 'Yantramanav', sans-serif;
+  --font2: 'Hind', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #250060, #070011, #250060)
+}
+
+body,
+.wrap,
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input,
+button {
+  padding: 0;
+  border: none;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  background-color: transparent;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+a {
+  outline: 0 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-family: var(--font1);
+  font-weight: 900;
+  font-style: italic;
+  color: var(--pink);
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: var(--font1);
+  font-weight: 500;
+  color: var(--white);
+}
+
+h2 span {
+  display: inline-block;
+  margin-bottom: .6rem;
+  border-bottom: 3px solid var(--purple);
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-family: var(--font1);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+h4 {
+  margin: .5rem 0;
+  font-size: 1.2rem;
+  font-family: var(--font1);
+  color: var(--white);
+}
+
+.t-b {
+  font-weight: bold;
+}
+
+.t-pink {
+  color: var(--pink);
+}
+
+.d-none {
+  opacity: 0;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/*------------------ intro ------------------*/
+
+.intro {
+  position: relative;
+  padding: 1.2rem 0 0 1.8rem;
+  width: 30%;
+}
+
+.intro p {
+  display: inline-block;
+  padding: .3rem .5rem .15rem .5rem;
+  margin: 2rem 0 .5rem 0;
+  font-family: var(--font2);
+  color: var(--d-blue);
+  background-color: var(--purple);
+}
+
+.intro img {
+  margin: 3rem 0 0 1rem;
+  width: 90%;
+}
+
+.level-info {
+  position: absolute;
+  bottom: 0;
+  padding: 1.2rem;
+  font-size: .8rem;
+  line-height: 1.4rem;
+  color: var(--white);
+  border: 2px solid var(--pink);
+}
+
+/*------------------ main ------------------*/
+
+.main {
+  padding: 1.2rem 1rem 0 1rem;
+  width: 35%;
+}
+
+.livel-1,
+.livel-2,
+.livel-3,
+.livel-4 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.level {
+  float: left;
+  width: 30%;
+}
+
+.level-close {
+  opacity: .3;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0;
+}
+
+.arrow-b {
+  margin: -3rem auto 0 auto;
+  width: 3rem;
+  background-color: var(--d-purple2);
+}
+
+.arrow-h {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1.3rem 2.5rem 0 2.5rem;
+  border-color: var(--d-purple2) transparent transparent transparent;
+}
+
+.livel-1 .arrow-b {
+  height: 3rem;
+}
+
+.livel-2 .arrow-b {
+  height: 8rem;
+}
+
+.skill {
+  float: right;
+  width: 65%;
+}
+
+.skill-item {
+  float: left;
+  margin-left: .5rem;
+}
+
+.skill-i {
+  margin-top: .4rem;
+}
+
+.skill-i .material-icons {
+  width: 3.6rem;
+  height: 3.6rem;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+.skill-p div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: .2rem 0;
+  color: var(--white);
+}
+
+.skill-p span {
+  margin-left: .2rem;
+  font-size: .8rem;
+}
+
+.skill-p .material-icons {
+  font-size: .9rem;
+  color: var(--white);
+}
+
+.skill-i {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  color: var(--white);
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.skill-close {
+  opacity: .3;
+}
+
+.skill-done .skill-i,
+.skill-done .skill-p span,
+.skill-done .skill-p .material-icons,
+.skill-over .skill-i,
+.skill-over .skill-p span,
+.skill-over .skill-p .material-icons {
+  color: var(--purple);
+}
+
+.skill-over .skill-i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  border-color: transparent var(--purple);
+  border-width: 0 1rem 1rem 0;
+  border-style: solid;
+}
+
+.skill-done .skill-i:hover,
+.skill-over .skill-i:hover {
+  color: var(--white);
+  cursor: pointer;
+  background-color: var(--purple);
+}
+
+.skill-open .skill-i:hover {
+  cursor: pointer;
+  background-color: var(--purple);
+}
+
+.skill-active .skill-i {
+  background-color: var(--purple);
+}
+
+/*------------------ info ------------------*/
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 1.2rem 1.8rem 0 0;
+  width: 30%;
+  color: var(--white);
+  background-color: var(--d-purple1);
+}
+
+.skill-name {
+  padding: 1rem;
+  width: 100%;
+  max-height: 16rem;
+  text-align: center;
+  background-color: var(--purple);
+}
+
+.skill-name .material-icons {
+  font-size: 8rem;
+}
+
+.skill-info {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.skill-info .material-icons {
+  font-size: 2.5rem;
+}
+
+.skill-info a {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 70%;
+  padding: .5rem;
+  text-decoration: none;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.skill-info a:hover,
+.skill-info-active {
+  border: 2px solid var(--pink) !important;
+  background-color: var(--pink);
+}
+
+/*------------------ footer ------------------*/
+
+#copyright {
+  margin: 2rem 0 1rem 0;
+  text-align: center;
+  font-size: .8rem;
+  color: rgba(128, 0, 255, .6);
+}
+
+#copyright p {
+  margin-bottom: 0rem;
+}
+
+.copyright_lines {
+  display: none;
+}
+
+/*------------------------------------ max-width: 900px ------------------------------------*/
+
+@media (max-width: 900px) {
+  .intro,
+  .main {
+    width: 50%;
+  }
+  .info {
+    margin: 2rem 2rem 0 2rem;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+/*------------------------------------ max-width: 690px ------------------------------------*/
+
+@media (max-width: 690px) {
+  .intro,
+  .main,
+  .info {
+    margin: 2rem;
+    padding: 0;
+    width: 100%;
+  }
+  .d-none {
+    display: none;
+  }
+  .level-info {
+    position: relative;
+    margin-top: 2.5rem;
+  }
+  /*------------------ footer ------------------*/
+  #copyright {
+    margin-top: .2rem;
+  }
+  .copyright_line {
+    display: none;
+  }
+  .copyright_lines {
+    display: block;
+  }
+}
